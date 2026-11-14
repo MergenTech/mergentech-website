@@ -1,0 +1,25 @@
+---
+import { texts } from '../lib/content';
+import type { Locale } from '../lib/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = texts(locale);
+---
+<section class="section band" aria-labelledby="a11y-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">{t.a11y.eyebrow}</span>
+      <h2 class="h2" id="a11y-title">{t.a11y.title}</h2>
+    </div>
+    <ul class="grid-3">
+      {t.a11y.items.map((item) => (
+        <li class="a11y-item" data-reveal>
+          <strong>{item.label}</strong>
+          <span>{item.text}</span>
+        </li>
+      ))}
+    </ul>
+    <p class="a11y-note">{t.a11y.note}</p>
+  </div>
+</section>

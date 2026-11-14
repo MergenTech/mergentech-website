@@ -1,0 +1,25 @@
+{
+  "order": 2,
+  "published": true,
+  "name": "OpenStad Headless",
+  "visual": "timeline",
+  "image": "",
+  "tags": ["Open source", "WCAG", "Upstream"],
+  "link": "https://github.com/openstad/openstad-headless/pulls?q=is%3Apr+author%3ASerdarAydemir",
+  "repo": "",
+  "nl": {
+    "title": "Verbeteringen voor alle gemeenten",
+    "summary": "Bijdragen die terugvloeien naar het platform dat gemeenten samen gebruiken: toegankelijke downloadlinks voor documenten, met bestandstype en grootte erbij, en werk aan de tijdlijn bij inzendingen.",
+    "role": "Open source bijdragen door Serdar, beoordeeld door de beheerders van OpenStad."
+  },
+  "en": {
+    "title": "Improvements for every municipality",
+    "summary": "Contributions that flow back into the platform municipalities share: accessible download links for documents, including file type and size, and work on the timeline for submissions.",
+    "role": "Open source contributions by Serdar, reviewed by the OpenStad maintainers."
+  },
+  "tr": {
+    "title": "Tüm belediyeler için iyileştirmeler",
+    "summary": "Belediyelerin ortak kullandığı platforma geri dönen katkılar: dosya türü ve boyutunu da gösteren erişilebilir belge indirme bağlantıları ve başvurulardaki zaman çizelgesi üzerine çalışmalar.",
+    "role": "Serdar'ın açık kaynak katkıları; OpenStad geliştiricileri tarafından incelendi."
+  }
+}

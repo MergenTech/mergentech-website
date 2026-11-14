@@ -1,0 +1,32 @@
+---
+import { texts, gemeenten } from '../lib/content';
+import type { Locale } from '../lib/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = texts(locale);
+const clients = gemeenten.items.filter((g) => g.relation === 'client');
+const experience = gemeenten.items.filter((g) => g.relation !== 'client');
+let i = 0;
+---
+{(clients.length > 0 || experience.length > 0) && (
+  <section class="trust" aria-label={t.trust.experience} data-inview>
+    <div class="wrap">
+      <p class="trust-cmd" aria-hidden="true">&gt; {t.trust.command}</p>
+      <div class="trust-groups">
+        {clients.length > 0 && (
+          <div class="trust-group">
+            <h2 class="eyebrow">{t.trust.clients}</h2>
+            <ul class="trust-list">{clients.map((g) => <li style={`--i:${i++}`}>{g.name}</li>)}</ul>
+          </div>
+        )}
+        {experience.length > 0 && (
+          <div class="trust-group">
+            <h2 class="eyebrow">{t.trust.experience}</h2>
+            <ul class="trust-list">{experience.map((g) => <li style={`--i:${i++}`}>{g.name}</li>)}</ul>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+)}

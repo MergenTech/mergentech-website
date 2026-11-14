@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Mergen Tech — Software that hits the mark",
+    "description": "Mergen Tech builds accessible civic participation tools for Dutch municipalities and custom software for businesses. Open source where possible, WCAG 2.2 as the standard."
+  },
+  "nav": {
+    "services": "Services",
+    "work": "Work",
+    "products": "Products",
+    "about": "About",
+    "opensource": "Open source",
+    "cta": "Get in touch",
+    "menu": "Menu",
+    "skip": "Skip to content",
+    "language": "Language",
+    "theme": "Dark mode",
+    "motion": "Animations on or off",
+    "home": "Mergen Tech, go to homepage"
+  },
+  "hero": {
+    "prompt_command": "what are you building?",
+    "title": "Software that hits the mark",
+    "lead": "Mergen Tech builds accessible civic participation tools for municipalities and custom software for businesses. Open source where possible, WCAG 2.2 as the standard.",
+    "cta_primary": "See our work",
+    "cta_secondary": "Get in touch"
+  },
+  "trust": {
+    "command": "ls municipalities/",
+    "clients": "Clients",
+    "experience": "Experience and community"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Two tracks, one standard.",
+    "cards": [
+      {
+        "title": "For municipalities",
+        "text": "Participation tools every resident can use. Built on OpenStad and tested for accessibility.",
+        "bullets": [
+          "Plugins and widgets for OpenStad Headless",
+          "Digital accessibility: WCAG 2.2 and EN 301 549",
+          "Accessible documents and PDFs",
+          "Management and advice for TYPO3 websites"
+        ]
+      },
+      {
+        "title": "For businesses and individuals",
+        "text": "Have an app or website built, without the noise. One point of contact and clear agreements.",
+        "bullets": [
+          "Web and mobile apps",
+          "Websites and internal tools",
+          "Fixed price per phase where possible"
+        ]
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "Our own products",
+    "title": "What we build and maintain ourselves.",
+    "status_development": "in development",
+    "status_pilot": "pilot",
+    "status_live": "live",
+    "more_title": "More to come",
+    "more_text": "We are working on new products. As soon as something is ready, you will find it here."
+  },
+  "work": {
+    "eyebrow": "Featured work",
+    "title": "Built for real residents.",
+    "role": "Role",
+    "visit": "View live",
+    "code": "View the code",
+    "choose": "Choose a project"
+  },
+  "a11y": {
+    "eyebrow": "Accessible by default",
+    "title": "Not fixed afterwards. From the first line.",
+    "items": [
+      {
+        "label": "WCAG 2.2",
+        "text": "Level AA is the starting point for everything we deliver."
+      },
+      {
+        "label": "EN 301 549",
+        "text": "The European standard public bodies ask for in procurement."
+      },
+      {
+        "label": "PDF/UA",
+        "text": "Documents that also read well with a screen reader."
+      }
+    ],
+    "note": "This site uses no tracking cookies and respects your preference for reduced motion. Use the pause button at the top to switch animations off yourself."
+  },
+  "oss": {
+    "eyebrow": "Open source",
+    "title": "What we learn, we give back.",
+    "text": "We contribute to OpenStad Headless, the open source participation platform Dutch municipalities share. That way every municipality benefits.",
+    "button": "View on GitHub",
+    "merged": "merged",
+    "open": "in review",
+    "summary": "contributions to openstad-headless",
+    "fallback": "View all contributions on GitHub."
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "title": "Listen well first, then build with aim.",
+    "steps": [
+      {
+        "title": "Meet",
+        "text": "A first conversation, no strings attached."
+      },
+      {
+        "title": "Sharpen the question",
+        "text": "Goal, audience and constraints."
+      },
+      {
+        "title": "Build",
+        "text": "Short steps, accessible from day one."
+      },
+      {
+        "title": "Test",
+        "text": "With users, against WCAG and for security."
+      },
+      {
+        "title": "Deliver and share",
+        "text": "Live, documented and open source where possible."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About Mergen",
+    "title": "The archer who hits the mark.",
+    "paragraphs": [
+      "In ancient Turkic mythology, Mergen is the god of wisdom: the archer who never misses. We bring that precision to our work. Listen well first, then build with aim.",
+      "Our logo says it too: a prompt waiting for your question (>), and a point that hits home (.).",
+      "Mergen Tech is run by Serdar Aydemir. He worked as a civil servant in both Türkiye and the Netherlands, studied history, and now builds participation software at a Dutch municipality. He knows the public sector from the inside."
+    ],
+    "photo_alt": "Portrait of Serdar Aydemir"
+  },
+  "pricing": {
+    "eyebrow": "Working together",
+    "title": "Three ways to start.",
+    "models": [
+      {
+        "title": "Hourly rate",
+        "value": "on request",
+        "text": "For advice, audits and small jobs."
+      },
+      {
+        "title": "Fixed price",
+        "value": "per phase",
+        "text": "Clear scope, clear amount. No surprises."
+      },
+      {
+        "title": "Prepaid hours",
+        "value": "10 · 20 · 40 hours",
+        "text": "For maintenance and further development."
+      }
+    ],
+    "note": "Municipalities receive a tailored quote."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "tell us what you want to build",
+    "text": "Send an email with your question or idea. You will get a reply as soon as possible, usually within a few working days.",
+    "audiences": [
+      {
+        "label": "I work for a municipality or public body",
+        "subject": "Question from a municipality"
+      },
+      {
+        "label": "I have a business",
+        "subject": "Question from a business"
+      },
+      {
+        "label": "I am an individual",
+        "subject": "Question from an individual"
+      }
+    ],
+    "copy": "Copy email address",
+    "copied": "copied",
+    "calendar": "Schedule an intro call",
+    "whatsapp": "WhatsApp",
+    "no_tracking": "No form, no newsletter, no tracking."
+  },
+  "footer": {
+    "kvk": "Chamber of Commerce (KvK)",
+    "vestiging": "Branch number",
+    "vat": "VAT ID",
+    "sitemap_title": "Site",
+    "legal_title": "Legal",
+    "privacy": "Privacy statement",
+    "colophon": "Colophon",
+    "proof_title": "How this site is built",
+    "no_cookies": "No tracking cookies",
+    "source": "Source code on GitHub"
+  },
+  "notfound": {
+    "title": "404: path not found",
+    "text": "This page does not exist (any more).",
+    "back": "Back to the homepage"
+  }
+}

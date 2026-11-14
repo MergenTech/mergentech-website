@@ -1,0 +1,64 @@
+---
+import { texts } from '../lib/content';
+import type { Locale } from '../lib/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = texts(locale);
+
+const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+// De titel wordt letter voor letter "getypt". Schermlezers krijgen de hele zin in één keer.
+const words = ['>', ...t.hero.title.trim().split(/\s+/)];
+let i = 0;
+const typed = words
+  .map((word, w) => {
+    const last = w === words.length - 1;
+    const chars = [...word].map((c) => `<span class="ch" style="--i:${i++}">${esc(c)}</span>`).join('');
+    const tail = last
+      ? `<span class="ch dot" style="--i:${i++}">.</span>`
+      : `<span class="ch" style="--i:${i++}"> </span>`;
+    return `<span class="word">${chars}${tail}</span>`;
+  })
+  .join('');
+const total = i;
+
+const dots: { x: number; y: number }[] = [];
+for (let r = 0; r < 7; r++) for (let c = 0; c < 7; c++) if (!(r === 3 && c === 3)) dots.push({ x: 30 + c * 60, y: 30 + r * 60 });
+---
+<section class="hero band" aria-labelledby="hero-title" style={`--n:${total}`} data-hero>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="terminal">
+        <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="terminal-body">
+          <p class="prompt-line" aria-hidden="true">mergen@tech:~$ <b>{t.hero.prompt_command}</b></p>
+          <h1 class="hero-title" id="hero-title">
+            <span class="sr-only">{t.hero.title}.</span>
+            <span class="typed" aria-hidden="true" set:html={typed} />
+          </h1>
+        </div>
+      </div>
+      <p class="hero-lead">{t.hero.lead}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">{t.hero.cta_primary} <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#contact">{t.hero.cta_secondary}</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <svg class="target" viewBox="0 0 420 420" data-target focusable="false">
+        <g class="dots">
+          {dots.map((d) => <circle cx={d.x} cy={d.y} r="2.2" data-x={d.x} data-y={d.y}></circle>)}
+        </g>
+        <circle class="ring ring-3" style="--r:2" cx="210" cy="210" r="150"></circle>
+        <circle class="ring ring-2" style="--r:1" cx="210" cy="210" r="100"></circle>
+        <circle class="ring ring-1" style="--r:0" cx="210" cy="210" r="50"></circle>
+        <path class="arrow-line" d="M132 132 L203 203"></path>
+        <circle class="impact" cx="210" cy="210" r="10"></circle>
+        <circle class="impact impact-2" cx="210" cy="210" r="10"></circle>
+        <circle class="bullseye" cx="210" cy="210" r="10"></circle>
+      </svg>
+    </div>
+  </div>
+</section>

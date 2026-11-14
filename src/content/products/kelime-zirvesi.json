@@ -1,0 +1,24 @@
+{
+  "order": 2,
+  "published": true,
+  "name": "Kelime Zirvesi",
+  "status": "development",
+  "visual": "letters",
+  "image": "",
+  "url": "",
+  "nl": {
+    "tagline": "Turks woordspel",
+    "text": "Een Turks woordspel voor je telefoon. Meer informatie volgt binnenkort.",
+    "cta": ""
+  },
+  "en": {
+    "tagline": "Turkish word game",
+    "text": "A Turkish word game for your phone. More information coming soon.",
+    "cta": ""
+  },
+  "tr": {
+    "tagline": "Türkçe kelime oyunu",
+    "text": "Telefonunuz için Türkçe bir kelime oyunu. Ayrıntılar yakında.",
+    "cta": ""
+  }
+}

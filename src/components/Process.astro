@@ -1,0 +1,26 @@
+---
+import { texts } from '../lib/content';
+import type { Locale } from '../lib/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = texts(locale);
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+<section class="section section-alt" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">{t.process.eyebrow}</span>
+      <h2 class="h2" id="process-title">{t.process.title}</h2>
+    </div>
+    <ol class="steps" data-inview>
+      {t.process.steps.map((step, i) => (
+        <li class="step" style={`--i:${i}`}>
+          <span class="step-num" aria-hidden="true">{pad(i + 1)}</span>
+          <strong>{step.title}</strong>
+          <span>{step.text}</span>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

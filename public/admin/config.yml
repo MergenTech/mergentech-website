@@ -1,0 +1,1817 @@
+# Dit bestand wordt gegenereerd door scripts/gen-cms-config.mjs — niet met de hand aanpassen.
+# Opnieuw maken: npm run cms:config
+backend:
+  name: github
+  repo: MergenTech/mergentech-website
+  branch: main
+site_url: https://mergentech.nl
+media_folder: public/uploads
+public_folder: /uploads
+collections:
+  - name: texts
+    label: Site metinleri
+    description: Sitedeki tüm metinler, dil başına bir dosya.
+    files:
+      - label: Nederlands
+        name: nl
+        file: src/content/texts/nl.json
+        fields:
+          - label: SEO (başlık ve açıklama)
+            name: meta
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Description
+                name: description
+                widget: text
+                required: false
+          - label: Menü ve üst bar
+            name: nav
+            widget: object
+            collapsed: true
+            fields:
+              - label: Services
+                name: services
+                widget: string
+                required: false
+              - label: Work
+                name: work
+                widget: string
+                required: false
+              - label: Products
+                name: products
+                widget: string
+                required: false
+              - label: About
+                name: about
+                widget: string
+                required: false
+              - label: Opensource
+                name: opensource
+                widget: string
+                required: false
+              - label: Cta
+                name: cta
+                widget: string
+                required: false
+              - label: Menu
+                name: menu
+                widget: string
+                required: false
+              - label: Skip
+                name: skip
+                widget: string
+                required: false
+              - label: Language
+                name: language
+                widget: string
+                required: false
+              - label: Theme
+                name: theme
+                widget: string
+                required: false
+              - label: Motion
+                name: motion
+                widget: string
+                required: false
+              - label: Home
+                name: home
+                widget: string
+                required: false
+          - label: Hero (ilk ekran)
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - label: Prompt command
+                name: prompt_command
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Lead
+                name: lead
+                widget: text
+                required: false
+              - label: Cta primary
+                name: cta_primary
+                widget: string
+                required: false
+              - label: Cta secondary
+                name: cta_secondary
+                widget: string
+                required: false
+          - label: Belediyeler satırı
+            name: trust
+            widget: object
+            collapsed: true
+            fields:
+              - label: Command
+                name: command
+                widget: string
+                required: false
+              - label: Clients
+                name: clients
+                widget: string
+                required: false
+              - label: Experience
+                name: experience
+                widget: string
+                required: false
+          - label: Hizmetler
+            name: services
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Cards
+                name: cards
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: text
+                    required: false
+                  - label: Bullets
+                    name: bullets
+                    widget: list
+                    field:
+                      label: Metin
+                      name: item
+                      widget: text
+          - label: Ürünler bölümü (başlıklar)
+            name: products
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Status development
+                name: status_development
+                widget: string
+                required: false
+              - label: Status pilot
+                name: status_pilot
+                widget: string
+                required: false
+              - label: Status live
+                name: status_live
+                widget: string
+                required: false
+              - label: More title
+                name: more_title
+                widget: string
+                required: false
+              - label: More text
+                name: more_text
+                widget: text
+                required: false
+          - label: Projeler bölümü (başlıklar)
+            name: work
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Role
+                name: role
+                widget: string
+                required: false
+              - label: Visit
+                name: visit
+                widget: string
+                required: false
+              - label: Code
+                name: code
+                widget: string
+                required: false
+              - label: Choose
+                name: choose
+                widget: string
+                required: false
+          - label: Erişilebilirlik bölümü
+            name: a11y
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Items
+                name: items
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: string
+                    required: false
+              - label: Note
+                name: note
+                widget: text
+                required: false
+          - label: Açık kaynak bölümü
+            name: oss
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Text
+                name: text
+                widget: text
+                required: false
+              - label: Button
+                name: button
+                widget: string
+                required: false
+              - label: Merged
+                name: merged
+                widget: string
+                required: false
+              - label: Open
+                name: open
+                widget: string
+                required: false
+              - label: Summary
+                name: summary
+                widget: string
+                required: false
+              - label: Fallback
+                name: fallback
+                widget: string
+                required: false
+          - label: Çalışma şekli
+            name: process
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Steps
+                name: steps
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: string
+                    required: false
+          - label: Hakkında
+            name: about
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                field:
+                  label: Metin
+                  name: item
+                  widget: text
+              - label: Photo alt
+                name: photo_alt
+                widget: string
+                required: false
+          - label: Birlikte çalışmak (fiyat modelleri)
+            name: pricing
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Models
+                name: models
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                    required: false
+                  - label: Value
+                    name: value
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: string
+                    required: false
+              - label: Note
+                name: note
+                widget: string
+                required: false
+          - label: İletişim
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Text
+                name: text
+                widget: text
+                required: false
+              - label: Audiences
+                name: audiences
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                    required: false
+                  - label: Subject
+                    name: subject
+                    widget: string
+                    required: false
+              - label: Copy
+                name: copy
+                widget: string
+                required: false
+              - label: Copied
+                name: copied
+                widget: string
+                required: false
+              - label: Calendar
+                name: calendar
+                widget: string
+                required: false
+              - label: Whatsapp
+                name: whatsapp
+                widget: string
+                required: false
+              - label: No tracking
+                name: no_tracking
+                widget: string
+                required: false
+          - label: Footer
+            name: footer
+            widget: object
+            collapsed: true
+            fields:
+              - label: Kvk
+                name: kvk
+                widget: string
+                required: false
+              - label: Vestiging
+                name: vestiging
+                widget: string
+                required: false
+              - label: Vat
+                name: vat
+                widget: string
+                required: false
+              - label: Sitemap title
+                name: sitemap_title
+                widget: string
+                required: false
+              - label: Legal title
+                name: legal_title
+                widget: string
+                required: false
+              - label: Privacy
+                name: privacy
+                widget: string
+                required: false
+              - label: Colophon
+                name: colophon
+                widget: string
+                required: false
+              - label: Proof title
+                name: proof_title
+                widget: string
+                required: false
+              - label: No cookies
+                name: no_cookies
+                widget: string
+                required: false
+              - label: Source
+                name: source
+                widget: string
+                required: false
+          - label: 404 sayfası
+            name: notfound
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Text
+                name: text
+                widget: string
+                required: false
+              - label: Back
+                name: back
+                widget: string
+                required: false
+      - label: English
+        name: en
+        file: src/content/texts/en.json
+        fields:
+          - label: SEO (başlık ve açıklama)
+            name: meta
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Description
+                name: description
+                widget: text
+                required: false
+          - label: Menü ve üst bar
+            name: nav
+            widget: object
+            collapsed: true
+            fields:
+              - label: Services
+                name: services
+                widget: string
+                required: false
+              - label: Work
+                name: work
+                widget: string
+                required: false
+              - label: Products
+                name: products
+                widget: string
+                required: false
+              - label: About
+                name: about
+                widget: string
+                required: false
+              - label: Opensource
+                name: opensource
+                widget: string
+                required: false
+              - label: Cta
+                name: cta
+                widget: string
+                required: false
+              - label: Menu
+                name: menu
+                widget: string
+                required: false
+              - label: Skip
+                name: skip
+                widget: string
+                required: false
+              - label: Language
+                name: language
+                widget: string
+                required: false
+              - label: Theme
+                name: theme
+                widget: string
+                required: false
+              - label: Motion
+                name: motion
+                widget: string
+                required: false
+              - label: Home
+                name: home
+                widget: string
+                required: false
+          - label: Hero (ilk ekran)
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - label: Prompt command
+                name: prompt_command
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Lead
+                name: lead
+                widget: text
+                required: false
+              - label: Cta primary
+                name: cta_primary
+                widget: string
+                required: false
+              - label: Cta secondary
+                name: cta_secondary
+                widget: string
+                required: false
+          - label: Belediyeler satırı
+            name: trust
+            widget: object
+            collapsed: true
+            fields:
+              - label: Command
+                name: command
+                widget: string
+                required: false
+              - label: Clients
+                name: clients
+                widget: string
+                required: false
+              - label: Experience
+                name: experience
+                widget: string
+                required: false
+          - label: Hizmetler
+            name: services
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Cards
+                name: cards
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: text
+                    required: false
+                  - label: Bullets
+                    name: bullets
+                    widget: list
+                    field:
+                      label: Metin
+                      name: item
+                      widget: text
+          - label: Ürünler bölümü (başlıklar)
+            name: products
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Status development
+                name: status_development
+                widget: string
+                required: false
+              - label: Status pilot
+                name: status_pilot
+                widget: string
+                required: false
+              - label: Status live
+                name: status_live
+                widget: string
+                required: false
+              - label: More title
+                name: more_title
+                widget: string
+                required: false
+              - label: More text
+                name: more_text
+                widget: text
+                required: false
+          - label: Projeler bölümü (başlıklar)
+            name: work
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Role
+                name: role
+                widget: string
+                required: false
+              - label: Visit
+                name: visit
+                widget: string
+                required: false
+              - label: Code
+                name: code
+                widget: string
+                required: false
+              - label: Choose
+                name: choose
+                widget: string
+                required: false
+          - label: Erişilebilirlik bölümü
+            name: a11y
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Items
+                name: items
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: string
+                    required: false
+              - label: Note
+                name: note
+                widget: text
+                required: false
+          - label: Açık kaynak bölümü
+            name: oss
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Text
+                name: text
+                widget: text
+                required: false
+              - label: Button
+                name: button
+                widget: string
+                required: false
+              - label: Merged
+                name: merged
+                widget: string
+                required: false
+              - label: Open
+                name: open
+                widget: string
+                required: false
+              - label: Summary
+                name: summary
+                widget: string
+                required: false
+              - label: Fallback
+                name: fallback
+                widget: string
+                required: false
+          - label: Çalışma şekli
+            name: process
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Steps
+                name: steps
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: string
+                    required: false
+          - label: Hakkında
+            name: about
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                field:
+                  label: Metin
+                  name: item
+                  widget: text
+              - label: Photo alt
+                name: photo_alt
+                widget: string
+                required: false
+          - label: Birlikte çalışmak (fiyat modelleri)
+            name: pricing
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Models
+                name: models
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                    required: false
+                  - label: Value
+                    name: value
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: string
+                    required: false
+              - label: Note
+                name: note
+                widget: string
+                required: false
+          - label: İletişim
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Text
+                name: text
+                widget: text
+                required: false
+              - label: Audiences
+                name: audiences
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                    required: false
+                  - label: Subject
+                    name: subject
+                    widget: string
+                    required: false
+              - label: Copy
+                name: copy
+                widget: string
+                required: false
+              - label: Copied
+                name: copied
+                widget: string
+                required: false
+              - label: Calendar
+                name: calendar
+                widget: string
+                required: false
+              - label: Whatsapp
+                name: whatsapp
+                widget: string
+                required: false
+              - label: No tracking
+                name: no_tracking
+                widget: string
+                required: false
+          - label: Footer
+            name: footer
+            widget: object
+            collapsed: true
+            fields:
+              - label: Kvk
+                name: kvk
+                widget: string
+                required: false
+              - label: Vestiging
+                name: vestiging
+                widget: string
+                required: false
+              - label: Vat
+                name: vat
+                widget: string
+                required: false
+              - label: Sitemap title
+                name: sitemap_title
+                widget: string
+                required: false
+              - label: Legal title
+                name: legal_title
+                widget: string
+                required: false
+              - label: Privacy
+                name: privacy
+                widget: string
+                required: false
+              - label: Colophon
+                name: colophon
+                widget: string
+                required: false
+              - label: Proof title
+                name: proof_title
+                widget: string
+                required: false
+              - label: No cookies
+                name: no_cookies
+                widget: string
+                required: false
+              - label: Source
+                name: source
+                widget: string
+                required: false
+          - label: 404 sayfası
+            name: notfound
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Text
+                name: text
+                widget: string
+                required: false
+              - label: Back
+                name: back
+                widget: string
+                required: false
+      - label: Türkçe
+        name: tr
+        file: src/content/texts/tr.json
+        fields:
+          - label: SEO (başlık ve açıklama)
+            name: meta
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Description
+                name: description
+                widget: text
+                required: false
+          - label: Menü ve üst bar
+            name: nav
+            widget: object
+            collapsed: true
+            fields:
+              - label: Services
+                name: services
+                widget: string
+                required: false
+              - label: Work
+                name: work
+                widget: string
+                required: false
+              - label: Products
+                name: products
+                widget: string
+                required: false
+              - label: About
+                name: about
+                widget: string
+                required: false
+              - label: Opensource
+                name: opensource
+                widget: string
+                required: false
+              - label: Cta
+                name: cta
+                widget: string
+                required: false
+              - label: Menu
+                name: menu
+                widget: string
+                required: false
+              - label: Skip
+                name: skip
+                widget: string
+                required: false
+              - label: Language
+                name: language
+                widget: string
+                required: false
+              - label: Theme
+                name: theme
+                widget: string
+                required: false
+              - label: Motion
+                name: motion
+                widget: string
+                required: false
+              - label: Home
+                name: home
+                widget: string
+                required: false
+          - label: Hero (ilk ekran)
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - label: Prompt command
+                name: prompt_command
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Lead
+                name: lead
+                widget: text
+                required: false
+              - label: Cta primary
+                name: cta_primary
+                widget: string
+                required: false
+              - label: Cta secondary
+                name: cta_secondary
+                widget: string
+                required: false
+          - label: Belediyeler satırı
+            name: trust
+            widget: object
+            collapsed: true
+            fields:
+              - label: Command
+                name: command
+                widget: string
+                required: false
+              - label: Clients
+                name: clients
+                widget: string
+                required: false
+              - label: Experience
+                name: experience
+                widget: string
+                required: false
+          - label: Hizmetler
+            name: services
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Cards
+                name: cards
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: text
+                    required: false
+                  - label: Bullets
+                    name: bullets
+                    widget: list
+                    field:
+                      label: Metin
+                      name: item
+                      widget: text
+          - label: Ürünler bölümü (başlıklar)
+            name: products
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Status development
+                name: status_development
+                widget: string
+                required: false
+              - label: Status pilot
+                name: status_pilot
+                widget: string
+                required: false
+              - label: Status live
+                name: status_live
+                widget: string
+                required: false
+              - label: More title
+                name: more_title
+                widget: string
+                required: false
+              - label: More text
+                name: more_text
+                widget: text
+                required: false
+          - label: Projeler bölümü (başlıklar)
+            name: work
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Role
+                name: role
+                widget: string
+                required: false
+              - label: Visit
+                name: visit
+                widget: string
+                required: false
+              - label: Code
+                name: code
+                widget: string
+                required: false
+              - label: Choose
+                name: choose
+                widget: string
+                required: false
+          - label: Erişilebilirlik bölümü
+            name: a11y
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Items
+                name: items
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: string
+                    required: false
+              - label: Note
+                name: note
+                widget: text
+                required: false
+          - label: Açık kaynak bölümü
+            name: oss
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Text
+                name: text
+                widget: text
+                required: false
+              - label: Button
+                name: button
+                widget: string
+                required: false
+              - label: Merged
+                name: merged
+                widget: string
+                required: false
+              - label: Open
+                name: open
+                widget: string
+                required: false
+              - label: Summary
+                name: summary
+                widget: string
+                required: false
+              - label: Fallback
+                name: fallback
+                widget: string
+                required: false
+          - label: Çalışma şekli
+            name: process
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Steps
+                name: steps
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: string
+                    required: false
+          - label: Hakkında
+            name: about
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                field:
+                  label: Metin
+                  name: item
+                  widget: text
+              - label: Photo alt
+                name: photo_alt
+                widget: string
+                required: false
+          - label: Birlikte çalışmak (fiyat modelleri)
+            name: pricing
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Models
+                name: models
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                    required: false
+                  - label: Value
+                    name: value
+                    widget: string
+                    required: false
+                  - label: Text
+                    name: text
+                    widget: string
+                    required: false
+              - label: Note
+                name: note
+                widget: string
+                required: false
+          - label: İletişim
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - label: Eyebrow
+                name: eyebrow
+                widget: string
+                required: false
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Text
+                name: text
+                widget: text
+                required: false
+              - label: Audiences
+                name: audiences
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                    required: false
+                  - label: Subject
+                    name: subject
+                    widget: string
+                    required: false
+              - label: Copy
+                name: copy
+                widget: string
+                required: false
+              - label: Copied
+                name: copied
+                widget: string
+                required: false
+              - label: Calendar
+                name: calendar
+                widget: string
+                required: false
+              - label: Whatsapp
+                name: whatsapp
+                widget: string
+                required: false
+              - label: No tracking
+                name: no_tracking
+                widget: string
+                required: false
+          - label: Footer
+            name: footer
+            widget: object
+            collapsed: true
+            fields:
+              - label: Kvk
+                name: kvk
+                widget: string
+                required: false
+              - label: Vestiging
+                name: vestiging
+                widget: string
+                required: false
+              - label: Vat
+                name: vat
+                widget: string
+                required: false
+              - label: Sitemap title
+                name: sitemap_title
+                widget: string
+                required: false
+              - label: Legal title
+                name: legal_title
+                widget: string
+                required: false
+              - label: Privacy
+                name: privacy
+                widget: string
+                required: false
+              - label: Colophon
+                name: colophon
+                widget: string
+                required: false
+              - label: Proof title
+                name: proof_title
+                widget: string
+                required: false
+              - label: No cookies
+                name: no_cookies
+                widget: string
+                required: false
+              - label: Source
+                name: source
+                widget: string
+                required: false
+          - label: 404 sayfası
+            name: notfound
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: Text
+                name: text
+                widget: string
+                required: false
+              - label: Back
+                name: back
+                widget: string
+                required: false
+  - name: gemeenten
+    label: Belediyeler
+    description: Hero altındaki satırda görünen belediye ve kurumlar.
+    files:
+      - label: Belediye listesi
+        name: gemeenten
+        file: src/content/gemeenten.json
+        fields:
+          - label: Belediyeler ve kurumlar
+            name: items
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - label: Ad
+                name: name
+                widget: string
+              - label: İlişki
+                name: relation
+                widget: select
+                default: client
+                options:
+                  - label: Müşteri (Opdrachtgever)
+                    value: client
+                  - label: Deneyim / topluluk
+                    value: experience
+  - name: projects
+    label: Projeler
+    label_singular: Proje
+    folder: src/content/projects
+    extension: json
+    create: true
+    slug: "{{name}}"
+    summary: "{{order}} · {{name}}"
+    fields:
+      - label: Ad
+        name: name
+        widget: string
+      - label: Yayında (sitede göster)
+        name: published
+        widget: boolean
+        default: true
+      - label: Sıra (küçük sayı önce gelir)
+        name: order
+        widget: number
+        value_type: int
+        default: 10
+      - label: Çizim
+        name: visual
+        widget: select
+        default: swipe
+        options:
+          - label: Telefon + kart (swipe)
+            value: swipe
+          - label: Zaman çizelgesi
+            value: timeline
+          - label: Çubuk grafik
+            value: bars
+      - label: Görsel (boş bırakılırsa çizim gösterilir)
+        name: image
+        widget: image
+        required: false
+      - label: Etiketler
+        name: tags
+        widget: list
+        field:
+          label: Etiket
+          name: tag
+          widget: string
+      - label: Canlı link
+        name: link
+        widget: string
+        required: false
+      - label: Kod linki (repo)
+        name: repo
+        widget: string
+        required: false
+      - label: Nederlands
+        name: nl
+        widget: object
+        collapsed: false
+        fields:
+          - label: Başlık
+            name: title
+            widget: string
+          - label: Özet
+            name: summary
+            widget: text
+          - label: Rol (kim, hangi sıfatla yaptı)
+            name: role
+            widget: text
+            required: false
+      - label: English
+        name: en
+        widget: object
+        collapsed: true
+        fields:
+          - label: Başlık
+            name: title
+            widget: string
+          - label: Özet
+            name: summary
+            widget: text
+          - label: Rol (kim, hangi sıfatla yaptı)
+            name: role
+            widget: text
+            required: false
+      - label: Türkçe
+        name: tr
+        widget: object
+        collapsed: true
+        fields:
+          - label: Başlık
+            name: title
+            widget: string
+          - label: Özet
+            name: summary
+            widget: text
+          - label: Rol (kim, hangi sıfatla yaptı)
+            name: role
+            widget: text
+            required: false
+  - name: products
+    label: Ürünler
+    label_singular: Ürün
+    folder: src/content/products
+    extension: json
+    create: true
+    slug: "{{name}}"
+    summary: "{{order}} · {{name}}"
+    fields:
+      - label: Ad
+        name: name
+        widget: string
+      - label: Yayında (sitede göster)
+        name: published
+        widget: boolean
+        default: true
+      - label: Sıra (küçük sayı önce gelir)
+        name: order
+        widget: number
+        value_type: int
+        default: 10
+      - label: Durum
+        name: status
+        widget: select
+        default: development
+        options:
+          - label: Geliştiriliyor
+            value: development
+          - label: Pilot
+            value: pilot
+          - label: Yayında
+            value: live
+      - label: Çizim
+        name: visual
+        widget: select
+        default: document
+        options:
+          - label: Belge
+            value: document
+          - label: Harf taşları
+            value: letters
+      - label: Görsel (boş bırakılırsa çizim gösterilir)
+        name: image
+        widget: image
+        required: false
+      - label: Ürün linki (boşsa iletişim bölümüne gider)
+        name: url
+        widget: string
+        required: false
+      - label: Nederlands
+        name: nl
+        widget: object
+        collapsed: false
+        fields:
+          - label: Kısa slogan
+            name: tagline
+            widget: string
+          - label: Açıklama
+            name: text
+            widget: text
+          - label: Link metni (boşsa link gösterilmez)
+            name: cta
+            widget: string
+            required: false
+      - label: English
+        name: en
+        widget: object
+        collapsed: true
+        fields:
+          - label: Kısa slogan
+            name: tagline
+            widget: string
+          - label: Açıklama
+            name: text
+            widget: text
+          - label: Link metni (boşsa link gösterilmez)
+            name: cta
+            widget: string
+            required: false
+      - label: Türkçe
+        name: tr
+        widget: object
+        collapsed: true
+        fields:
+          - label: Kısa slogan
+            name: tagline
+            widget: string
+          - label: Açıklama
+            name: text
+            widget: text
+          - label: Link metni (boşsa link gösterilmez)
+            name: cta
+            widget: string
+            required: false
+  - name: settings
+    label: Şirket bilgileri
+    files:
+      - label: Şirket ve iletişim
+        name: company
+        file: src/content/company.json
+        fields:
+          - label: Şirket adı
+            name: name
+            widget: string
+          - label: Hukuki yapı
+            name: legal_form
+            widget: string
+          - label: Kurucu
+            name: founder
+            widget: string
+          - label: KvK numarası
+            name: kvk
+            widget: string
+          - label: Vestigingsnummer
+            name: vestigingsnummer
+            widget: string
+            required: false
+          - label: Btw-id (NL…B..)
+            name: vat_id
+            widget: string
+            required: false
+          - label: Sokak ve numara
+            name: street
+            widget: string
+          - label: Posta kodu
+            name: postal_code
+            widget: string
+          - label: Şehir
+            name: city
+            widget: string
+          - label: E-posta
+            name: email
+            widget: string
+          - label: Takvim linki (Cal.com vb.)
+            name: calendar_url
+            widget: string
+            required: false
+          - label: LinkedIn
+            name: linkedin_url
+            widget: string
+            required: false
+          - label: GitHub (şirket)
+            name: github_url
+            widget: string
+            required: false
+          - label: GitHub (kişisel)
+            name: github_personal_url
+            widget: string
+            required: false
+          - label: WhatsApp numarası (+31…)
+            name: whatsapp_number
+            widget: string
+            required: false
+          - label: Portre fotoğrafı (Hakkında bölümü)
+            name: portrait
+            widget: image
+            required: false
+      - label: Açık kaynak listesi (GitHub)
+        name: oss
+        file: src/content/oss.json
+        fields:
+          - label: Repo (owner/name)
+            name: repo
+            widget: string
+          - label: GitHub kullanıcı adı
+            name: author
+            widget: string
+          - label: En fazla kaç PR gösterilsin
+            name: max_items
+            widget: number
+            value_type: int
+          - label: Gösterilmeyecek PR numaraları
+            name: exclude
+            widget: list
+            field:
+              label: PR numarası
+              name: number
+              widget: number
+              value_type: int
+  - name: pages
+    label: Yasal sayfalar
+    files:
+      - label: Privacy — Nederlands
+        name: privacy-nl
+        file: src/content/pages/privacy.nl.md
+        fields:
+          - label: Başlık
+            name: title
+            widget: string
+          - label: Son güncelleme
+            name: updated
+            widget: datetime
+            format: YYYY-MM-DD
+            time_format: false
+          - label: Metin
+            name: body
+            widget: markdown
+      - label: Privacy — English
+        name: privacy-en
+        file: src/content/pages/privacy.en.md
+        fields:
+          - label: Başlık
+            name: title
+            widget: string
+          - label: Son güncelleme
+            name: updated
+            widget: datetime
+            format: YYYY-MM-DD
+            time_format: false
+          - label: Metin
+            name: body
+            widget: markdown
+      - label: Privacy — Türkçe
+        name: privacy-tr
+        file: src/content/pages/privacy.tr.md
+        fields:
+          - label: Başlık
+            name: title
+            widget: string
+          - label: Son güncelleme
+            name: updated
+            widget: datetime
+            format: YYYY-MM-DD
+            time_format: false
+          - label: Metin
+            name: body
+            widget: markdown
+      - label: Colofon — Nederlands
+        name: colofon-nl
+        file: src/content/pages/colofon.nl.md
+        fields:
+          - label: Başlık
+            name: title
+            widget: string
+          - label: Son güncelleme
+            name: updated
+            widget: datetime
+            format: YYYY-MM-DD
+            time_format: false
+          - label: Metin
+            name: body
+            widget: markdown
+      - label: Colofon — English
+        name: colofon-en
+        file: src/content/pages/colofon.en.md
+        fields:
+          - label: Başlık
+            name: title
+            widget: string
+          - label: Son güncelleme
+            name: updated
+            widget: datetime
+            format: YYYY-MM-DD
+            time_format: false
+          - label: Metin
+            name: body
+            widget: markdown
+      - label: Colofon — Türkçe
+        name: colofon-tr
+        file: src/content/pages/colofon.tr.md
+        fields:
+          - label: Başlık
+            name: title
+            widget: string
+          - label: Son güncelleme
+            name: updated
+            widget: datetime
+            format: YYYY-MM-DD
+            time_format: false
+          - label: Metin
+            name: body
+            widget: markdown

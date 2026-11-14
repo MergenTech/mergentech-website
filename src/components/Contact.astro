@@ -1,0 +1,52 @@
+---
+import { texts, company } from '../lib/content';
+import type { Locale } from '../lib/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = texts(locale);
+const mailto = (subject: string) => `mailto:${company.email}?subject=${encodeURIComponent(subject)}`;
+const wa = company.whatsapp_number.replace(/\D/g, '');
+---
+<section class="section band" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-layout">
+    <div class="contact-copy" data-reveal>
+      <span class="eyebrow">{t.contact.eyebrow}</span>
+      <h2 class="h2 contact-title" id="contact-title">
+        <span class="gt" aria-hidden="true">&gt; </span>{t.contact.title}<span class="dot" aria-hidden="true">.</span>
+      </h2>
+      <p>{t.contact.text}</p>
+      <p class="contact-foot">{t.contact.no_tracking}</p>
+    </div>
+
+    <div class="contact-card" data-reveal>
+      <div>
+        <div class="mail-row">
+          <a class="mail-link" href={`mailto:${company.email}`}>{company.email}</a>
+          <button type="button" class="copy-btn" data-copy={company.email} data-copied={`> ${t.contact.copied}.`}>{t.contact.copy}</button>
+        </div>
+        <p class="copy-status" role="status" data-copy-status></p>
+      </div>
+
+      <ul class="audiences">
+        {t.contact.audiences.map((a) => (
+          <li>
+            <a class="audience" href={mailto(a.subject)}>
+              <span>{a.label}</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      {(company.calendar_url || company.linkedin_url || company.github_url || wa) && (
+        <ul class="contact-extra">
+          {company.calendar_url && <li><a href={company.calendar_url}>{t.contact.calendar} <span aria-hidden="true">↗</span></a></li>}
+          {wa && <li><a href={`https://wa.me/${wa}`}>{t.contact.whatsapp} <span aria-hidden="true">↗</span></a></li>}
+          {company.linkedin_url && <li><a href={company.linkedin_url}>LinkedIn <span aria-hidden="true">↗</span></a></li>}
+          {company.github_url && <li><a href={company.github_url}>GitHub <span aria-hidden="true">↗</span></a></li>}
+        </ul>
+      )}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import { texts } from '../lib/content';
+import type { Locale } from '../lib/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = texts(locale);
+---
+<section class="section section-alt" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">{t.pricing.eyebrow}</span>
+      <h2 class="h2" id="pricing-title">{t.pricing.title}</h2>
+    </div>
+    <ul class="grid-3">
+      {t.pricing.models.map((m, i) => (
+        <li class:list={['card', 'model', { 'model-featured': i === 1 }]} data-reveal>
+          <strong>{m.title}</strong>
+          <span class="value">{m.value}</span>
+          <p>{m.text}</p>
+        </li>
+      ))}
+    </ul>
+    {t.pricing.note && <p class="pricing-note">{t.pricing.note}</p>}
+  </div>
+</section>

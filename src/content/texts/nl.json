@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Mergen Tech — Software die raak is",
+    "description": "Mergen Tech bouwt toegankelijke participatietools voor gemeenten en maatwerksoftware voor ondernemers. Open source waar het kan, WCAG 2.2 als standaard."
+  },
+  "nav": {
+    "services": "Diensten",
+    "work": "Werk",
+    "products": "Producten",
+    "about": "Over",
+    "opensource": "Open source",
+    "cta": "Neem contact op",
+    "menu": "Menu",
+    "skip": "Naar de inhoud",
+    "language": "Taal",
+    "theme": "Donkere modus",
+    "motion": "Animaties aan of uit",
+    "home": "Mergen Tech, naar de homepage"
+  },
+  "hero": {
+    "prompt_command": "wat bouw je?",
+    "title": "Software die raak is",
+    "lead": "Mergen Tech bouwt toegankelijke participatietools voor gemeenten en maatwerksoftware voor ondernemers. Open source waar het kan, WCAG 2.2 als standaard.",
+    "cta_primary": "Bekijk werk",
+    "cta_secondary": "Neem contact op"
+  },
+  "trust": {
+    "command": "ls gemeenten/",
+    "clients": "Opdrachtgevers",
+    "experience": "Ervaring en community"
+  },
+  "services": {
+    "eyebrow": "Diensten",
+    "title": "Twee sporen, één standaard.",
+    "cards": [
+      {
+        "title": "Voor gemeenten",
+        "text": "Participatietools die elke inwoner kan gebruiken. Gebouwd op OpenStad en getoetst op toegankelijkheid.",
+        "bullets": [
+          "Plugins en widgets voor OpenStad Headless",
+          "Digitoegankelijkheid: WCAG 2.2 en EN 301 549",
+          "Toegankelijke documenten en pdf's",
+          "Beheer en advies voor TYPO3-websites"
+        ]
+      },
+      {
+        "title": "Voor ondernemers en particulieren",
+        "text": "Een app of website laten bouwen, zonder ruis. Eén aanspreekpunt en duidelijke afspraken.",
+        "bullets": [
+          "Web- en mobiele apps",
+          "Websites en interne tools",
+          "Vaste prijs per fase waar het kan"
+        ]
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "Eigen producten",
+    "title": "Wat we zelf bouwen en onderhouden.",
+    "status_development": "in ontwikkeling",
+    "status_pilot": "pilot",
+    "status_live": "live",
+    "more_title": "Meer volgt",
+    "more_text": "We werken aan nieuwe producten. Zodra er iets klaar is, staat het hier."
+  },
+  "work": {
+    "eyebrow": "Uitgelicht werk",
+    "title": "Gebouwd voor echte inwoners.",
+    "role": "Rol",
+    "visit": "Bekijk live",
+    "code": "Bekijk de code",
+    "choose": "Kies een project"
+  },
+  "a11y": {
+    "eyebrow": "Toegankelijk als standaard",
+    "title": "Niet achteraf gefikst. Vanaf de eerste regel.",
+    "items": [
+      {
+        "label": "WCAG 2.2",
+        "text": "Niveau AA is het uitgangspunt bij alles wat we opleveren."
+      },
+      {
+        "label": "EN 301 549",
+        "text": "De Europese norm waar overheden bij inkoop om vragen."
+      },
+      {
+        "label": "PDF/UA",
+        "text": "Documenten die ook met een schermlezer goed te lezen zijn."
+      }
+    ],
+    "note": "Deze site gebruikt geen tracking-cookies en respecteert je voorkeur voor minder beweging. Met de pauzeknop bovenaan zet je animaties zelf uit."
+  },
+  "oss": {
+    "eyebrow": "Open source",
+    "title": "Wat we leren, geven we terug.",
+    "text": "We dragen bij aan OpenStad Headless, het open source participatieplatform dat Nederlandse gemeenten samen gebruiken. Zo heeft elke gemeente er iets aan.",
+    "button": "Bekijk op GitHub",
+    "merged": "samengevoegd",
+    "open": "in review",
+    "summary": "bijdragen aan openstad-headless",
+    "fallback": "Bekijk alle bijdragen op GitHub."
+  },
+  "process": {
+    "eyebrow": "Werkwijze",
+    "title": "Eerst goed luisteren, dan gericht bouwen.",
+    "steps": [
+      {
+        "title": "Kennismaken",
+        "text": "Een eerste gesprek, vrijblijvend."
+      },
+      {
+        "title": "Vraag scherp",
+        "text": "Doel, doelgroep en randvoorwaarden."
+      },
+      {
+        "title": "Bouwen",
+        "text": "Korte stappen, toegankelijk vanaf dag één."
+      },
+      {
+        "title": "Toetsen",
+        "text": "Met gebruikers, op WCAG en op veiligheid."
+      },
+      {
+        "title": "Opleveren en delen",
+        "text": "Live, gedocumenteerd en open source waar het kan."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Over Mergen",
+    "title": "De boogschutter die raak schiet.",
+    "paragraphs": [
+      "Mergen is in de oude Turkse mythologie de god van wijsheid: de boogschutter die zijn doel nooit mist. Die precisie nemen we mee. Eerst goed luisteren, dan gericht bouwen.",
+      "Ons logo zegt het ook: een prompt die wacht op jouw vraag (>), en een punt die raak is (.).",
+      "Achter Mergen Tech staat Serdar Aydemir. Hij werkte als ambtenaar in Turkije en in Nederland, studeerde geschiedenis en bouwt nu participatiesoftware bij een gemeente. Hij kent de publieke sector dus van binnenuit."
+    ],
+    "photo_alt": "Portret van Serdar Aydemir"
+  },
+  "pricing": {
+    "eyebrow": "Samenwerken",
+    "title": "Drie manieren om te starten.",
+    "models": [
+      {
+        "title": "Uurtarief",
+        "value": "op aanvraag",
+        "text": "Voor advies, toetsing en kleine klussen."
+      },
+      {
+        "title": "Vaste prijs",
+        "value": "per fase",
+        "text": "Duidelijke scope, duidelijk bedrag. Geen verrassingen."
+      },
+      {
+        "title": "Strippenkaart",
+        "value": "10 · 20 · 40 uur",
+        "text": "Voor onderhoud en doorontwikkeling."
+      }
+    ],
+    "note": "Gemeenten ontvangen een offerte op maat."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "vertel wat je wilt bouwen",
+    "text": "Stuur een e-mail met je vraag of idee. Je krijgt zo snel mogelijk antwoord, meestal binnen een paar werkdagen.",
+    "audiences": [
+      {
+        "label": "Ik werk bij een gemeente of overheid",
+        "subject": "Vraag van een gemeente"
+      },
+      {
+        "label": "Ik heb een bedrijf",
+        "subject": "Vraag van een bedrijf"
+      },
+      {
+        "label": "Ik ben particulier",
+        "subject": "Vraag van een particulier"
+      }
+    ],
+    "copy": "Kopieer e-mailadres",
+    "copied": "gekopieerd",
+    "calendar": "Plan een kennismaking",
+    "whatsapp": "WhatsApp",
+    "no_tracking": "Geen formulier, geen nieuwsbrief, geen tracking."
+  },
+  "footer": {
+    "kvk": "KvK",
+    "vestiging": "Vestigingsnummer",
+    "vat": "Btw-id",
+    "sitemap_title": "Site",
+    "legal_title": "Juridisch",
+    "privacy": "Privacyverklaring",
+    "colophon": "Colofon",
+    "proof_title": "Zo is deze site gebouwd",
+    "no_cookies": "Geen tracking-cookies",
+    "source": "Broncode op GitHub"
+  },
+  "notfound": {
+    "title": "404: pad niet gevonden",
+    "text": "Deze pagina bestaat niet (meer).",
+    "back": "Terug naar de homepage"
+  }
+}

@@ -1,0 +1,25 @@
+---
+import Mark from './Mark.astro';
+import { texts, company } from '../lib/content';
+import { asset, type Locale } from '../lib/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = texts(locale);
+---
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap about-layout">
+    <div class="about-visual" data-reveal>
+      {company.portrait ? (
+        <img src={asset(company.portrait)} alt={t.about.photo_alt} loading="lazy" />
+      ) : (
+        <Mark class="about-mark" />
+      )}
+    </div>
+    <div class="about-copy" data-reveal>
+      <span class="eyebrow">{t.about.eyebrow}</span>
+      <h2 class="h2" id="about-title">{t.about.title}</h2>
+      {t.about.paragraphs.map((p) => <p>{p}</p>)}
+    </div>
+  </div>
+</section>

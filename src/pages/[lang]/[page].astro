@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import { LOCALES, type Locale } from '../../lib/i18n';
+
+// Tekstpagina's (privacy, colofon): één Markdown-bestand per taal in src/content/pages/.
+type Doc = { frontmatter: { title: string; updated?: string | Date }; Content: any };
+const docs = import.meta.glob<Doc>('../../content/pages/*.md', { eager: true });
+
+export function getStaticPaths() {
+  const docs = import.meta.glob('../../content/pages/*.md', { eager: true });
+  return Object.keys(docs).map((file) => {
+    const [page, lang] = file.split('/').pop()!.replace(/\.md$/, '').split('.');
+    return { params: { lang, page } };
+  });
+}
+
+const locale = Astro.params.lang as Locale;
+const slug = Astro.params.page as string;
+const doc = docs[`../../content/pages/${slug}.${locale}.md`];
+const { title, updated } = doc.frontmatter;
+const Content = doc.Content;
+const date = updated ? new Date(updated) : undefined;
+const hasAll = LOCALES.every((l) => `../../content/pages/${slug}.${l}.md` in docs);
+---
+<Base locale={locale} slug={hasAll ? slug : ''} title={title} noindex={!hasAll}>
+  <div class="wrap prose-page">
+    <article class="prose">
+      <h1>{title}</h1>
+      {date && (
+        <p class="updated"><time datetime={date.toISOString().slice(0, 10)}>{date.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time></p>
+      )}
+      <Content />
+    </article>
+  </div>
+</Base>

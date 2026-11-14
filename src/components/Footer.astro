@@ -1,0 +1,51 @@
+---
+import { page, type Locale } from '../lib/i18n';
+import { texts, company } from '../lib/content';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = texts(locale);
+const home = page(locale);
+---
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-company">
+      <span class="footer-brand" aria-hidden="true">mergen<span class="dot">.</span></span>
+      <address>
+        {company.name} ({company.legal_form})<br />
+        {company.street}, {company.postal_code} {company.city}<br />
+        <a href={`mailto:${company.email}`}>{company.email}</a><br />
+        {t.footer.kvk}: {company.kvk}
+        {company.vestigingsnummer && <><br />{t.footer.vestiging}: {company.vestigingsnummer}</>}
+        {company.vat_id && <><br />{t.footer.vat}: {company.vat_id}</>}
+      </address>
+    </div>
+
+    <nav aria-label={t.footer.sitemap_title}>
+      <strong>{t.footer.sitemap_title}</strong>
+      <ul class="footer-list">
+        <li><a href={`${home}#services`}>{t.nav.services}</a></li>
+        <li><a href={`${home}#work`}>{t.nav.work}</a></li>
+        <li><a href={`${home}#products`}>{t.nav.products}</a></li>
+        <li><a href={`${home}#about`}>{t.nav.about}</a></li>
+        <li><a href={`${home}#contact`}>{t.contact.eyebrow}</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label={t.footer.legal_title}>
+      <strong>{t.footer.legal_title}</strong>
+      <ul class="footer-list">
+        <li><a href={page(locale, 'privacy')}>{t.footer.privacy}</a></li>
+        <li><a href={page(locale, 'colofon')}>{t.footer.colophon}</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <strong>{t.footer.proof_title}</strong>
+      <ul class="footer-list footer-proof">
+        <li>{t.footer.no_cookies}</li>
+        <li><a href="https://github.com/MergenTech/mergentech-website">{t.footer.source}</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

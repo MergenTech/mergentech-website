@@ -1,0 +1,24 @@
+{
+  "order": 1,
+  "published": true,
+  "name": "Luwia",
+  "status": "development",
+  "visual": "document",
+  "image": "",
+  "url": "",
+  "nl": {
+    "tagline": "Toegankelijke documenten, zonder gedoe",
+    "text": "Luwia maakt van je tekst een toegankelijke pdf (PDF/UA): in heldere taal op B1-niveau en in de huisstijl van je organisatie. Je gegevens blijven in Nederland.",
+    "cta": "Interesse? Mail ons"
+  },
+  "en": {
+    "tagline": "Accessible documents, without the hassle",
+    "text": "Luwia turns your text into an accessible PDF (PDF/UA): in plain language at B1 level and in your organisation's visual identity. Your data stays in the Netherlands.",
+    "cta": "Interested? Email us"
+  },
+  "tr": {
+    "tagline": "Zahmetsiz erişilebilir belgeler",
+    "text": "Luwia metninizi erişilebilir bir PDF'e (PDF/UA) dönüştürür: B1 seviyesinde sade bir dille ve kurumunuzun kimliğiyle. Verileriniz Hollanda'da kalır.",
+    "cta": "İlgileniyorsanız yazın"
+  }
+}

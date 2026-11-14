@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import { texts } from '../lib/content';
+import { page } from '../lib/i18n';
+const t = texts('nl');
+---
+<Base locale="nl" title={t.notfound.title} noindex>
+  <div class="wrap notfound">
+    <div>
+      <h1 class="mono">&gt; {t.notfound.title}<span style="color: var(--orange)">.</span></h1>
+      <p>{t.notfound.text}</p>
+      <p>
+        <a class="btn btn-primary" href={page('nl')}>{t.notfound.back}</a>
+      </p>
+      <p>
+        <a href={page('en')} lang="en">English</a> · <a href={page('tr')} lang="tr">Türkçe</a>
+      </p>
+    </div>
+  </div>
+</Base>

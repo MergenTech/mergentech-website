@@ -1,0 +1,25 @@
+{
+  "order": 1,
+  "published": true,
+  "name": "Fix je Shit",
+  "visual": "swipe",
+  "image": "",
+  "tags": ["React", "OpenStad-plugin", "WCAG"],
+  "link": "https://www.nijmegen.nl/fixjeshit",
+  "repo": "",
+  "nl": {
+    "title": "Swipe-quiz voor 18-jarigen",
+    "summary": "Een self-check voor jongeren die 18 worden: DigiD, zorgverzekering, zorgtoeslag, wonen, werk en donorregister. Swipen zoals je gewend bent, zonder account en zonder dat er gegevens naar een server gaan. Het is de eerste plugin op het pluginsysteem van OpenStad.",
+    "role": "Gebouwd door Serdar als developer bij gemeente Nijmegen, samen met het team van de gemeente."
+  },
+  "en": {
+    "title": "Swipe quiz for 18-year-olds",
+    "summary": "A self-check for young people turning 18: DigiD, health insurance, healthcare allowance, housing, work and the donor register. Swipe the way you are used to, without an account and without any data going to a server. It is the first plugin on the OpenStad plugin system.",
+    "role": "Built by Serdar as a developer at the municipality of Nijmegen, together with the municipal team."
+  },
+  "tr": {
+    "title": "18 yaşına girenler için kaydırmalı test",
+    "summary": "18 yaşına giren gençler için bir öz kontrol: DigiD, sağlık sigortası, sağlık yardımı, konut, iş ve bağışçı kaydı. Alışık olduğunuz gibi kaydırarak, hesap açmadan ve hiçbir veri sunucuya gitmeden. OpenStad eklenti sistemindeki ilk eklenti.",
+    "role": "Serdar tarafından Nijmegen Belediyesi'nde geliştirici olarak, belediye ekibiyle birlikte geliştirildi."
+  }
+}

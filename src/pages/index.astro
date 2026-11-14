@@ -1,0 +1,18 @@
+---
+// De root stuurt door naar de Nederlandse homepage.
+import { page } from '../lib/i18n';
+const target = page('nl');
+---
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mergen Tech</title>
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={new URL(target, Astro.site).href} />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <p><a href={target}>Mergen Tech</a></p>
+  </body>
+</html>

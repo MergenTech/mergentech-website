@@ -1,0 +1,108 @@
+---
+import { texts, projects } from '../lib/content';
+import { asset, type Locale } from '../lib/i18n';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = texts(locale);
+const pad = (n: number) => String(n).padStart(2, '0');
+---
+{projects.length > 0 && (
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">{t.work.eyebrow}</span>
+        <h2 class="h2" id="work-title">{t.work.title}</h2>
+      </div>
+
+      <div class="work-layout" data-tabs>
+        <div class="work-tabs" data-tablist aria-label={t.work.choose} hidden>
+          {projects.map((p, i) => (
+            <button type="button" class="work-tab" id={`tab-${p.slug}`} data-tab={`panel-${p.slug}`}>
+              <span class="num" aria-hidden="true">{pad(i + 1)}</span>
+              <span>{p.name}</span>
+            </button>
+          ))}
+        </div>
+
+        <div class="work-panels">
+          {projects.map((p) => {
+            const c = p[locale];
+            return (
+              <div class="work-panel is-active" id={`panel-${p.slug}`} data-panel>
+                <div class="work-stage">
+                  <div class="work-art" aria-hidden="true">
+                    {p.image ? (
+                      <img src={asset(p.image)} alt="" loading="lazy" />
+                    ) : p.visual === 'timeline' ? (
+                      <svg class="art" viewBox="0 0 480 270" focusable="false">
+                        <path class="a-line" d="M110 44 V226" stroke-width="2"></path>
+                        <rect class="a-orange tl-fill" x="109" y="44" width="2" height="122"></rect>
+                        <circle class="a-orange tl-dot" style="--i:0" cx="110" cy="50" r="8"></circle>
+                        <circle class="a-orange tl-dot" style="--i:1" cx="110" cy="108" r="8"></circle>
+                        <circle class="a-orange tl-dot" style="--i:2" cx="110" cy="166" r="8"></circle>
+                        <circle class="a-orange-stroke" cx="110" cy="224" r="7" stroke-width="2"></circle>
+                        <rect class="a-card" x="140" y="40" width="120" height="8" rx="3"></rect>
+                        <rect class="a-soft" x="140" y="56" width="190" height="6" rx="3"></rect>
+                        <rect class="a-card" x="140" y="98" width="150" height="8" rx="3"></rect>
+                        <rect class="a-soft" x="140" y="114" width="210" height="6" rx="3"></rect>
+                        <rect class="a-card" x="140" y="156" width="100" height="8" rx="3"></rect>
+                        <rect x="140" y="174" width="232" height="34" rx="8" class="a-fill"></rect>
+                        <path d="M154 183 h10 l5 5 v12 h-15 z" class="a-card"></path>
+                        <text class="a-text-soft" x="180" y="196" font-size="13" fill="#D9DFEA">document.pdf · 240 kB</text>
+                        <rect class="a-soft" x="140" y="220" width="130" height="8" rx="3"></rect>
+                      </svg>
+                    ) : p.visual === 'bars' ? (
+                      <svg class="art" viewBox="0 0 480 270" focusable="false">
+                        <path class="a-line" d="M90 220 H400" stroke-width="2"></path>
+                        <rect class="a-soft bar" style="--i:0" x="110" y="120" width="40" height="100" rx="4"></rect>
+                        <rect class="a-orange bar" style="--i:1" x="170" y="70" width="40" height="150" rx="4"></rect>
+                        <rect class="a-soft bar" style="--i:2" x="230" y="150" width="40" height="70" rx="4"></rect>
+                        <rect class="a-card bar" style="--i:3" x="290" y="96" width="40" height="124" rx="4"></rect>
+                        <rect class="a-soft bar" style="--i:4" x="350" y="134" width="40" height="86" rx="4"></rect>
+                      </svg>
+                    ) : (
+                      <svg class="art" viewBox="0 0 480 270" focusable="false">
+                        <rect class="a-line" x="172" y="14" width="136" height="242" rx="20" stroke-width="2"></rect>
+                        <rect class="a-soft" x="222" y="24" width="36" height="5" rx="2.5"></rect>
+                        <rect class="a-card-2" x="192" y="66" width="96" height="112" rx="10"></rect>
+                        <g class="swipe-card">
+                          <rect class="a-card" x="186" y="54" width="108" height="124" rx="12"></rect>
+                          <circle class="a-orange" cx="240" cy="94" r="17"></circle>
+                          <path d="M232 94 l6 6 l10 -12" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <text class="a-text-ink" x="240" y="140" font-size="15" text-anchor="middle">DigiD?</text>
+                          <rect x="212" y="152" width="56" height="5" rx="2.5" fill="#9aa3b5"></rect>
+                        </g>
+                        <circle class="a-line" cx="214" cy="216" r="16" stroke-width="2"></circle>
+                        <path class="a-line" d="M208 210 l12 12 M220 210 l-12 12" stroke-width="2.4" stroke-linecap="round"></path>
+                        <circle class="a-orange" cx="266" cy="216" r="16"></circle>
+                        <path d="M259 216 l5 5 l9 -10" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path class="a-line" d="M330 120 h34 m-10 -9 l10 9 l-10 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path class="a-line" d="M150 120 h-34 m10 -9 l-10 9 l10 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    )}
+                  </div>
+                  {p.tags.length > 0 && (
+                    <ul class="work-tags">{p.tags.map((tag) => <li class="tag">{tag}</li>)}</ul>
+                  )}
+                </div>
+                <div class="work-text">
+                  <span class="kicker">{p.name}</span>
+                  <h3>{c.title}</h3>
+                  <p>{c.summary}</p>
+                </div>
+                {c.role && <p class="work-role"><b>{t.work.role}:</b> {c.role}</p>}
+                {(p.link || p.repo) && (
+                  <p class="work-links">
+                    {p.link && <a class="link-arrow" href={p.link}>{t.work.visit}<span class="sr-only">: {p.name}</span> <span class="arrow" aria-hidden="true">↗</span></a>}
+                    {p.repo && <a class="link-arrow" href={p.repo}>{t.work.code}<span class="sr-only">: {p.name}</span> <span class="arrow" aria-hidden="true">↗</span></a>}
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  </section>
+)}

@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Mergen Tech — Hedefi tutturan yazılım",
+    "description": "Mergen Tech, Hollanda belediyeleri için erişilebilir katılım araçları ve işletmeler için özel yazılım geliştirir. Mümkün olan her yerde açık kaynak, standart olarak WCAG 2.2."
+  },
+  "nav": {
+    "services": "Hizmetler",
+    "work": "Projeler",
+    "products": "Ürünler",
+    "about": "Hakkında",
+    "opensource": "Açık kaynak",
+    "cta": "İletişime geç",
+    "menu": "Menü",
+    "skip": "İçeriğe geç",
+    "language": "Dil",
+    "theme": "Koyu mod",
+    "motion": "Animasyonları aç veya kapat",
+    "home": "Mergen Tech, ana sayfaya git"
+  },
+  "hero": {
+    "prompt_command": "ne geliştiriyorsun?",
+    "title": "Hedefi tutturan yazılım",
+    "lead": "Mergen Tech, belediyeler için erişilebilir katılım araçları ve işletmeler için özel yazılım geliştirir. Mümkün olan her yerde açık kaynak, standart olarak WCAG 2.2.",
+    "cta_primary": "Projelere bak",
+    "cta_secondary": "İletişime geç"
+  },
+  "trust": {
+    "command": "ls belediyeler/",
+    "clients": "Müşteriler",
+    "experience": "Deneyim ve topluluk"
+  },
+  "services": {
+    "eyebrow": "Hizmetler",
+    "title": "İki alan, tek standart.",
+    "cards": [
+      {
+        "title": "Belediyeler için",
+        "text": "Her vatandaşın kullanabildiği katılım araçları. OpenStad üzerine kurulu ve erişilebilirlik açısından test edilmiş.",
+        "bullets": [
+          "OpenStad Headless için eklenti ve widget'lar",
+          "Dijital erişilebilirlik: WCAG 2.2 ve EN 301 549",
+          "Erişilebilir belgeler ve PDF'ler",
+          "TYPO3 web siteleri için yönetim ve danışmanlık"
+        ]
+      },
+      {
+        "title": "İşletmeler ve bireyler için",
+        "text": "Uygulamanızı ya da web sitenizi karmaşa olmadan yaptırın. Tek muhatap, net anlaşmalar.",
+        "bullets": [
+          "Web ve mobil uygulamalar",
+          "Web siteleri ve kurum içi araçlar",
+          "Mümkün olduğunda aşama başına sabit fiyat"
+        ]
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "Kendi ürünlerimiz",
+    "title": "Kendimiz geliştirip yaşattıklarımız.",
+    "status_development": "geliştiriliyor",
+    "status_pilot": "pilot",
+    "status_live": "yayında",
+    "more_title": "Devamı gelecek",
+    "more_text": "Yeni ürünler üzerinde çalışıyoruz. Hazır olan burada yerini alacak."
+  },
+  "work": {
+    "eyebrow": "Öne çıkan projeler",
+    "title": "Gerçek vatandaşlar için geliştirildi.",
+    "role": "Rol",
+    "visit": "Canlı gör",
+    "code": "Koda bak",
+    "choose": "Bir proje seç"
+  },
+  "a11y": {
+    "eyebrow": "Standart olarak erişilebilir",
+    "title": "Sonradan düzeltilmez. İlk satırdan itibaren.",
+    "items": [
+      {
+        "label": "WCAG 2.2",
+        "text": "Teslim ettiğimiz her işte başlangıç noktası AA seviyesi."
+      },
+      {
+        "label": "EN 301 549",
+        "text": "Kamu kurumlarının alımlarda aradığı Avrupa standardı."
+      },
+      {
+        "label": "PDF/UA",
+        "text": "Ekran okuyucuyla da rahat okunan belgeler."
+      }
+    ],
+    "note": "Bu sitede takip çerezi yok ve daha az hareket tercihinize uyulur. Üstteki duraklatma düğmesiyle animasyonları kendiniz de kapatabilirsiniz."
+  },
+  "oss": {
+    "eyebrow": "Açık kaynak",
+    "title": "Öğrendiğimizi geri veriyoruz.",
+    "text": "Hollanda belediyelerinin ortak kullandığı açık kaynak katılım platformu OpenStad Headless'e katkı veriyoruz. Böylece her belediye faydalanıyor.",
+    "button": "GitHub'da gör",
+    "merged": "birleştirildi",
+    "open": "incelemede",
+    "summary": "openstad-headless katkısı",
+    "fallback": "Tüm katkıları GitHub'da gör."
+  },
+  "process": {
+    "eyebrow": "Çalışma şeklimiz",
+    "title": "Önce iyi dinle, sonra hedefe yönelik geliştir.",
+    "steps": [
+      {
+        "title": "Tanışma",
+        "text": "İlk görüşme, hiçbir yükümlülük olmadan."
+      },
+      {
+        "title": "İhtiyacı netleştirme",
+        "text": "Hedef, kitle ve koşullar."
+      },
+      {
+        "title": "Geliştirme",
+        "text": "Kısa adımlar, ilk günden erişilebilir."
+      },
+      {
+        "title": "Test",
+        "text": "Kullanıcılarla, WCAG ve güvenlik açısından."
+      },
+      {
+        "title": "Teslim ve paylaşım",
+        "text": "Yayında, belgelenmiş ve mümkünse açık kaynak."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Mergen hakkında",
+    "title": "Hedefi vuran okçu.",
+    "paragraphs": [
+      "Mergen, eski Türk mitolojisinde bilgelik tanrısıdır: hedefini hiç şaşırmayan okçu. Bu isabeti işimize taşıyoruz. Önce iyi dinliyoruz, sonra hedefe yönelik geliştiriyoruz.",
+      "Logomuz da bunu söylüyor: sorunuzu bekleyen bir komut satırı (>) ve hedefi bulan bir nokta (.).",
+      "Mergen Tech'in arkasında Serdar Aydemir var. Hem Türkiye'de hem Hollanda'da kamu görevlisi olarak çalıştı, tarih okudu ve bugün bir Hollanda belediyesinde katılım yazılımları geliştiriyor. Kamu sektörünü içeriden tanıyor."
+    ],
+    "photo_alt": "Serdar Aydemir'in portresi"
+  },
+  "pricing": {
+    "eyebrow": "Birlikte çalışmak",
+    "title": "Başlamanın üç yolu.",
+    "models": [
+      {
+        "title": "Saatlik ücret",
+        "value": "talep üzerine",
+        "text": "Danışmanlık, denetim ve küçük işler için."
+      },
+      {
+        "title": "Sabit fiyat",
+        "value": "aşama başına",
+        "text": "Net kapsam, net tutar. Sürpriz yok."
+      },
+      {
+        "title": "Saat paketi",
+        "value": "10 · 20 · 40 saat",
+        "text": "Bakım ve geliştirmeye devam için."
+      }
+    ],
+    "note": "Belediyeler için özel teklif hazırlanır."
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "title": "ne geliştirmek istediğini anlat",
+    "text": "Sorunuzu ya da fikrinizi e-postayla gönderin. En kısa sürede, genellikle birkaç iş günü içinde yanıt alırsınız.",
+    "audiences": [
+      {
+        "label": "Bir belediyede ya da kamu kurumunda çalışıyorum",
+        "subject": "Belediyeden soru"
+      },
+      {
+        "label": "Bir işletmem var",
+        "subject": "İşletmeden soru"
+      },
+      {
+        "label": "Bireysel olarak yazıyorum",
+        "subject": "Bireysel soru"
+      }
+    ],
+    "copy": "E-posta adresini kopyala",
+    "copied": "kopyalandı",
+    "calendar": "Tanışma görüşmesi planla",
+    "whatsapp": "WhatsApp",
+    "no_tracking": "Form yok, bülten yok, takip yok."
+  },
+  "footer": {
+    "kvk": "Ticaret Odası (KvK)",
+    "vestiging": "Şube numarası",
+    "vat": "KDV no (btw-id)",
+    "sitemap_title": "Site",
+    "legal_title": "Yasal",
+    "privacy": "Gizlilik bildirimi",
+    "colophon": "Künye",
+    "proof_title": "Bu site nasıl yapıldı",
+    "no_cookies": "Takip çerezi yok",
+    "source": "Kaynak kodu GitHub'da"
+  },
+  "notfound": {
+    "title": "404: yol bulunamadı",
+    "text": "Bu sayfa (artık) yok.",
+    "back": "Ana sayfaya dön"
+  }
+}
