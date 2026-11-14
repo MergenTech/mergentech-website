@@ -12,7 +12,7 @@ const t = texts(locale);
       <span class="eyebrow">{t.a11y.eyebrow}</span>
       <h2 class="h2" id="a11y-title">{t.a11y.title}</h2>
     </div>
-    <ul class="grid-3">
+    <ul class="grid-3" role="list">
       {t.a11y.items.map((item) => (
         <li class="a11y-item" data-reveal>
           <strong>{item.label}</strong>

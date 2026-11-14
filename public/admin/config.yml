@@ -387,6 +387,10 @@ collections:
                 name: text
                 widget: text
                 required: false
+              - label: Audiences intro
+                name: audiences_intro
+                widget: text
+                required: false
               - label: Audiences
                 name: audiences
                 widget: list
@@ -406,6 +410,10 @@ collections:
                 required: false
               - label: Copied
                 name: copied
+                widget: string
+                required: false
+              - label: Copy failed
+                name: copy_failed
                 widget: string
                 required: false
               - label: Calendar
@@ -857,6 +865,10 @@ collections:
                 name: text
                 widget: text
                 required: false
+              - label: Audiences intro
+                name: audiences_intro
+                widget: text
+                required: false
               - label: Audiences
                 name: audiences
                 widget: list
@@ -876,6 +888,10 @@ collections:
                 required: false
               - label: Copied
                 name: copied
+                widget: string
+                required: false
+              - label: Copy failed
+                name: copy_failed
                 widget: string
                 required: false
               - label: Calendar
@@ -1327,6 +1343,10 @@ collections:
                 name: text
                 widget: text
                 required: false
+              - label: Audiences intro
+                name: audiences_intro
+                widget: text
+                required: false
               - label: Audiences
                 name: audiences
                 widget: list
@@ -1346,6 +1366,10 @@ collections:
                 required: false
               - label: Copied
                 name: copied
+                widget: string
+                required: false
+              - label: Copy failed
+                name: copy_failed
                 widget: string
                 required: false
               - label: Calendar

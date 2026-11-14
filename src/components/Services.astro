@@ -18,7 +18,7 @@ const t = texts(locale);
           <span class="service-chevron" aria-hidden="true">&gt;</span>
           <h3>{card.title}</h3>
           <p>{card.text}</p>
-          <ul class="checks">{card.bullets.map((b) => <li><span>{b}</span></li>)}</ul>
+          <ul class="checks" role="list">{card.bullets.map((b) => <li><span>{b}</span></li>)}</ul>
         </article>
       ))}
     </div>

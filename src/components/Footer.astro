@@ -12,7 +12,7 @@ const home = page(locale);
     <div class="footer-company">
       <span class="footer-brand" aria-hidden="true">mergen<span class="dot">.</span></span>
       <address>
-        {company.name} ({company.legal_form})<br />
+        {company.name} (<span lang={locale === 'nl' ? undefined : 'nl'}>{company.legal_form}</span>)<br />
         {company.street}, {company.postal_code} {company.city}<br />
         <a href={`mailto:${company.email}`}>{company.email}</a><br />
         {t.footer.kvk}: {company.kvk}
@@ -23,7 +23,7 @@ const home = page(locale);
 
     <nav aria-label={t.footer.sitemap_title}>
       <strong>{t.footer.sitemap_title}</strong>
-      <ul class="footer-list">
+      <ul class="footer-list" role="list">
         <li><a href={`${home}#services`}>{t.nav.services}</a></li>
         <li><a href={`${home}#work`}>{t.nav.work}</a></li>
         <li><a href={`${home}#products`}>{t.nav.products}</a></li>
@@ -34,7 +34,7 @@ const home = page(locale);
 
     <nav aria-label={t.footer.legal_title}>
       <strong>{t.footer.legal_title}</strong>
-      <ul class="footer-list">
+      <ul class="footer-list" role="list">
         <li><a href={page(locale, 'privacy')}>{t.footer.privacy}</a></li>
         <li><a href={page(locale, 'colofon')}>{t.footer.colophon}</a></li>
       </ul>
@@ -42,7 +42,7 @@ const home = page(locale);
 
     <div>
       <strong>{t.footer.proof_title}</strong>
-      <ul class="footer-list footer-proof">
+      <ul class="footer-list footer-proof" role="list">
         <li>{t.footer.no_cookies}</li>
         <li><a href="https://github.com/MergenTech/mergentech-website">{t.footer.source}</a></li>
       </ul>

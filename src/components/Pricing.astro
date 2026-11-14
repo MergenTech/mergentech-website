@@ -12,7 +12,7 @@ const t = texts(locale);
       <span class="eyebrow">{t.pricing.eyebrow}</span>
       <h2 class="h2" id="pricing-title">{t.pricing.title}</h2>
     </div>
-    <ul class="grid-3">
+    <ul class="grid-3" role="list">
       {t.pricing.models.map((m, i) => (
         <li class:list={['card', 'model', { 'model-featured': i === 1 }]} data-reveal>
           <strong>{m.title}</strong>

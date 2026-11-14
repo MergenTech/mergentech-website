@@ -14,7 +14,7 @@
     "skip": "Skip to content",
     "language": "Language",
     "theme": "Dark mode",
-    "motion": "Animations on or off",
+    "motion": "Animations",
     "home": "Mergen Tech, go to homepage"
   },
   "hero": {
@@ -162,6 +162,7 @@
     "eyebrow": "Contact",
     "title": "tell us what you want to build",
     "text": "Send an email with your question or idea. You will get a reply as soon as possible, usually within a few working days.",
+    "audiences_intro": "Or choose who you are. Your email program will open with the right subject.",
     "audiences": [
       {
         "label": "I work for a municipality or public body",
@@ -178,6 +179,7 @@
     ],
     "copy": "Copy email address",
     "copied": "copied",
+    "copy_failed": "Copying did not work. The address is:",
     "calendar": "Schedule an intro call",
     "whatsapp": "WhatsApp",
     "no_tracking": "No form, no newsletter, no tracking."

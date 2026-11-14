@@ -31,18 +31,17 @@ const links = [
 
     <div class="header-panel" id="site-nav" data-menu>
       <nav aria-label={t.nav.menu}>
-        <ul class="nav-list">
+        <ul class="nav-list" role="list">
           {links.map((l) => <li><a href={`${home}#${l.id}`}>{l.label}</a></li>)}
         </ul>
       </nav>
 
       <div class="header-tools">
-        <ul class="lang" aria-label={t.nav.language}>
+        <ul class="lang" role="list" aria-label={t.nav.language}>
           {LOCALES.map((l) => (
             <li>
-              <a href={page(l, slug)} lang={l} hreflang={HREFLANG[l]} aria-current={l === locale ? 'true' : undefined} title={LOCALE_NAMES[l]}>
-                <span aria-hidden="true">{l.toUpperCase()}</span>
-                <span class="sr-only">{LOCALE_NAMES[l]}</span>
+              <a href={page(l, slug)} lang={l} hreflang={HREFLANG[l]} aria-current={l === locale ? 'true' : undefined}>
+                {l.toUpperCase()}<span class="sr-only"> {LOCALE_NAMES[l]}</span>
               </a>
             </li>
           ))}

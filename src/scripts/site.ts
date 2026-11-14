@@ -95,9 +95,13 @@ document.querySelectorAll<HTMLElement>('[data-tabs]').forEach((group) => {
 
   list.hidden = false;
   list.setAttribute('role', 'tablist');
+  // op brede schermen staan de tabbladen onder elkaar, op smalle naast elkaar
+  const stacked = matchMedia('(min-width: 56.3125em)');
+  const orient = () => list.setAttribute('aria-orientation', stacked.matches ? 'vertical' : 'horizontal');
+  orient();
+  stacked.addEventListener('change', orient);
   panels.forEach((panel) => {
     panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', '0');
     const tab = tabs.find((t) => t.dataset.tab === panel.id);
     if (tab) panel.setAttribute('aria-labelledby', tab.id);
   });
@@ -150,7 +154,8 @@ document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
         window.setTimeout(() => (status.textContent = ''), 4000);
       }
     } catch {
-      /* geen toegang tot het klembord: het adres staat als link naast de knop */
+      // geen toegang tot het klembord: toon het adres, zodat het met de hand te kopiëren is
+      if (status) status.textContent = btn.dataset.copyFailed!;
     }
   });
 });

@@ -22,7 +22,7 @@ const oss = await getOss();
       <p class="console-cmd" aria-hidden="true">$ gh pr list -R {settings.repo} -A {settings.author}</p>
       {oss.items.length > 0 ? (
         <>
-          <ol>
+          <ol role="list">
             {oss.items.map((pr, i) => (
               <li style={`--i:${i}`}>
                 <span class="pr-num">#{pr.number}</span>

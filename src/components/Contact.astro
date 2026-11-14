@@ -23,12 +23,13 @@ const wa = company.whatsapp_number.replace(/\D/g, '');
       <div>
         <div class="mail-row">
           <a class="mail-link" href={`mailto:${company.email}`}>{company.email}</a>
-          <button type="button" class="copy-btn" data-copy={company.email} data-copied={`> ${t.contact.copied}.`}>{t.contact.copy}</button>
+          <button type="button" class="copy-btn" data-copy={company.email} data-copied={`> ${t.contact.copied}.`} data-copy-failed={`${t.contact.copy_failed} ${company.email}`}>{t.contact.copy}</button>
         </div>
         <p class="copy-status" role="status" data-copy-status></p>
       </div>
 
-      <ul class="audiences">
+      <p class="audiences-intro" id="audiences-intro">{t.contact.audiences_intro}</p>
+      <ul class="audiences" role="list" aria-labelledby="audiences-intro">
         {t.contact.audiences.map((a) => (
           <li>
             <a class="audience" href={mailto(a.subject)}>
@@ -40,7 +41,7 @@ const wa = company.whatsapp_number.replace(/\D/g, '');
       </ul>
 
       {(company.calendar_url || company.linkedin_url || company.github_url || wa) && (
-        <ul class="contact-extra">
+        <ul class="contact-extra" role="list">
           {company.calendar_url && <li><a href={company.calendar_url}>{t.contact.calendar} <span aria-hidden="true">↗</span></a></li>}
           {wa && <li><a href={`https://wa.me/${wa}`}>{t.contact.whatsapp} <span aria-hidden="true">↗</span></a></li>}
           {company.linkedin_url && <li><a href={company.linkedin_url}>LinkedIn <span aria-hidden="true">↗</span></a></li>}

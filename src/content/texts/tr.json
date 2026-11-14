@@ -14,7 +14,7 @@
     "skip": "İçeriğe geç",
     "language": "Dil",
     "theme": "Koyu mod",
-    "motion": "Animasyonları aç veya kapat",
+    "motion": "Animasyonlar",
     "home": "Mergen Tech, ana sayfaya git"
   },
   "hero": {
@@ -162,6 +162,7 @@
     "eyebrow": "İletişim",
     "title": "ne geliştirmek istediğini anlat",
     "text": "Sorunuzu ya da fikrinizi e-postayla gönderin. En kısa sürede, genellikle birkaç iş günü içinde yanıt alırsınız.",
+    "audiences_intro": "Ya da kim olduğunuzu seçin. E-posta programınız doğru konu satırıyla açılır.",
     "audiences": [
       {
         "label": "Bir belediyede ya da kamu kurumunda çalışıyorum",
@@ -178,6 +179,7 @@
     ],
     "copy": "E-posta adresini kopyala",
     "copied": "kopyalandı",
+    "copy_failed": "Kopyalanamadı. Adres:",
     "calendar": "Tanışma görüşmesi planla",
     "whatsapp": "WhatsApp",
     "no_tracking": "Form yok, bülten yok, takip yok."

@@ -67,7 +67,7 @@ scripts/          hulpscripts voor het beheerpaneel
 
 ## Toegankelijkheid en beweging
 
-- Gebouwd volgens WCAG 2.2 AA; nog niet onafhankelijk getoetst.
+- Gebouwd volgens WCAG 2.2 AA. Getest met axe-core, een eigen contrast-, focus- en doelgroottecontrole, 400% zoom (320 px), tekstafstand (1.4.12) en een dubbele standaardlettergrootte. Nog niet getest met schermlezers door echte gebruikers en nog niet onafhankelijk getoetst.
 - Animaties volgen `prefers-reduced-motion` en zijn met de pauzeknop in de header uit te zetten.
 - De site werkt ook zonder JavaScript.
 

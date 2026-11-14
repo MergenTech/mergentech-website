@@ -14,7 +14,7 @@
     "skip": "Naar de inhoud",
     "language": "Taal",
     "theme": "Donkere modus",
-    "motion": "Animaties aan of uit",
+    "motion": "Animaties",
     "home": "Mergen Tech, naar de homepage"
   },
   "hero": {
@@ -162,6 +162,7 @@
     "eyebrow": "Contact",
     "title": "vertel wat je wilt bouwen",
     "text": "Stuur een e-mail met je vraag of idee. Je krijgt zo snel mogelijk antwoord, meestal binnen een paar werkdagen.",
+    "audiences_intro": "Of kies wie je bent. Dan opent je e-mailprogramma met het juiste onderwerp.",
     "audiences": [
       {
         "label": "Ik werk bij een gemeente of overheid",
@@ -178,6 +179,7 @@
     ],
     "copy": "Kopieer e-mailadres",
     "copied": "gekopieerd",
+    "copy_failed": "Kopiëren lukt niet. Het adres is:",
     "calendar": "Plan een kennismaking",
     "whatsapp": "WhatsApp",
     "no_tracking": "Geen formulier, geen nieuwsbrief, geen tracking."

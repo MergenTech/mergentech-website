@@ -17,13 +17,13 @@ let i = 0;
         {clients.length > 0 && (
           <div class="trust-group">
             <h2 class="eyebrow">{t.trust.clients}</h2>
-            <ul class="trust-list">{clients.map((g) => <li style={`--i:${i++}`}>{g.name}</li>)}</ul>
+            <ul class="trust-list" role="list">{clients.map((g) => <li style={`--i:${i++}`}>{g.name}</li>)}</ul>
           </div>
         )}
         {experience.length > 0 && (
           <div class="trust-group">
             <h2 class="eyebrow">{t.trust.experience}</h2>
-            <ul class="trust-list">{experience.map((g) => <li style={`--i:${i++}`}>{g.name}</li>)}</ul>
+            <ul class="trust-list" role="list">{experience.map((g) => <li style={`--i:${i++}`}>{g.name}</li>)}</ul>
           </div>
         )}
       </div>
