@@ -25,6 +25,8 @@ Token aanmaken: GitHub → Settings → Developer settings → Personal access t
 | Bedrijfsgegevens, e-mail, links | `src/content/company.json` |
 | Open-source-lijst (GitHub) | `src/content/oss.json` |
 | Privacy en colofon | `src/content/pages/*.md` |
+| Kelime Zirvesi: privacy en voorwaarden (Turks, `/kelime-zirvesi/gizlilik/` en `/kosullar/`) | `src/content/kelime-zirvesi/*.md` — kopie van `assets/legal/*_tr.md` uit de app-repo; daar eerst wijzigen |
+| AdMob `app-ads.txt` | `public/app-ads.txt` |
 
 - Een project of product verbergen: zet `"published": false`.
 - Een veld in `company.json` leeg laten (bijvoorbeeld `calendar_url` of `vat_id`) betekent: niet tonen.

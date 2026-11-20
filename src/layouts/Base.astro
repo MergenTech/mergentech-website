@@ -22,14 +22,16 @@ interface Props {
   title?: string;
   description?: string;
   noindex?: boolean;
+  /** Fixed path of a single-language page outside /[lang]/ (no hreflang alternates). */
+  path?: string;
 }
 
-const { locale, slug = '', title, description, noindex = false } = Astro.props;
+const { locale, slug = '', title, description, noindex = false, path } = Astro.props;
 const t = texts(locale);
 const pageTitle = title ? `${title} — ${company.name}` : t.meta.title;
 const pageDescription = description ?? t.meta.description;
 const abs = (path: string) => new URL(path, Astro.site).href;
-const canonical = abs(page(locale, slug));
+const canonical = abs(path ? url(path) : page(locale, slug));
 const ogImage = abs(url('/og.png'));
 
 const jsonLd = {
@@ -67,8 +69,8 @@ const jsonLd = {
     <meta name="description" content={pageDescription} />
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
-    {!noindex && LOCALES.map((l) => <link rel="alternate" hreflang={HREFLANG[l]} href={abs(page(l, slug))} />)}
-    {!noindex && <link rel="alternate" hreflang="x-default" href={abs(page(DEFAULT_LOCALE, slug))} />}
+    {!noindex && !path && LOCALES.map((l) => <link rel="alternate" hreflang={HREFLANG[l]} href={abs(page(l, slug))} />)}
+    {!noindex && !path && <link rel="alternate" hreflang="x-default" href={abs(page(DEFAULT_LOCALE, slug))} />}
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={company.name} />

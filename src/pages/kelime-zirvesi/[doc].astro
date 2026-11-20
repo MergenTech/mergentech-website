@@ -1,0 +1,27 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// Kelime Zirvesi: Turkse privacyverklaring en voorwaarden, op de vaste adressen die
+// de app noemt (https://mergentech.nl/kelime-zirvesi/gizlilik en /kosullar).
+// Bron: MergenTech/kelime-zirvesi assets/legal/{privacy,terms}_tr.md.
+type Doc = { frontmatter: { title: string }; Content: any };
+const docs = import.meta.glob<Doc>('../../content/kelime-zirvesi/*.md', { eager: true });
+
+export function getStaticPaths() {
+  const docs = import.meta.glob('../../content/kelime-zirvesi/*.md', { eager: true });
+  return Object.keys(docs).map((file) => ({
+    params: { doc: file.split('/').pop()!.replace(/\.md$/, '') },
+  }));
+}
+
+const slug = Astro.params.doc as string;
+const { frontmatter, Content } = docs[`../../content/kelime-zirvesi/${slug}.md`];
+---
+<Base locale="tr" title={frontmatter.title} path={`/kelime-zirvesi/${slug}/`}>
+  <div class="wrap prose-page">
+    <article class="prose">
+      <h1>{frontmatter.title}</h1>
+      <Content />
+    </article>
+  </div>
+</Base>
