@@ -194,6 +194,10 @@ collections:
                 name: status_live
                 widget: string
                 required: false
+              - label: Status soon
+                name: status_soon
+                widget: string
+                required: false
               - label: More title
                 name: more_title
                 widget: string
@@ -752,6 +756,10 @@ collections:
                 required: false
               - label: Status live
                 name: status_live
+                widget: string
+                required: false
+              - label: Status soon
+                name: status_soon
                 widget: string
                 required: false
               - label: More title
@@ -1314,6 +1322,10 @@ collections:
                 name: status_live
                 widget: string
                 required: false
+              - label: Status soon
+                name: status_soon
+                widget: string
+                required: false
               - label: More title
                 name: more_title
                 widget: string
@@ -1843,6 +1855,8 @@ collections:
             value: development
           - label: Pilot
             value: pilot
+          - label: Yakında (mağaza onayı bekleniyor)
+            value: soon
           - label: Yayında
             value: live
       - label: Çizim
@@ -1856,6 +1870,10 @@ collections:
             value: letters
       - label: Görsel (boş bırakılırsa çizim gösterilir)
         name: image
+        widget: image
+        required: false
+      - label: Uygulama simgesi (kare; çizimin yerine gösterilir)
+        name: icon
         widget: image
         required: false
       - label: Ürün linki (boşsa iletişim bölümüne gider)

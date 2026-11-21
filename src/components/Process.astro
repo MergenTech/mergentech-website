@@ -7,7 +7,7 @@ const { locale } = Astro.props;
 const t = texts(locale);
 const pad = (n: number) => String(n).padStart(2, '0');
 ---
-<section class="section section-alt" aria-labelledby="process-title">
+<section class="section" aria-labelledby="process-title">
   <div class="wrap">
     <div class="section-head" data-reveal>
       <span class="eyebrow">{t.process.eyebrow}</span>

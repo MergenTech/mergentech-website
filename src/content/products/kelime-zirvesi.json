@@ -1,24 +1,25 @@
 {
-  "order": 2,
+  "order": 1,
   "published": true,
   "name": "Kelime Zirvesi",
-  "status": "development",
+  "status": "soon",
   "visual": "letters",
   "image": "",
+  "icon": "/uploads/kelime-zirvesi-icon.png",
   "url": "",
   "nl": {
-    "tagline": "Turks woordspel",
-    "text": "Een Turks woordspel voor je telefoon. Meer informatie volgt binnenkort.",
+    "tagline": "Turks kruiswoordduel voor je telefoon",
+    "text": "Een kruiswoordspel in het Turks waarin je om de beurt letters legt tegen een tegenstander. Wie het woord afmaakt, pakt de bonus. Elke winst brengt je 40 meter hoger de berg op. Binnenkort in de App Store en op Google Play.",
     "cta": ""
   },
   "en": {
-    "tagline": "Turkish word game",
-    "text": "A Turkish word game for your phone. More information coming soon.",
+    "tagline": "Turkish crossword duel for your phone",
+    "text": "A crossword game in Turkish where you and an opponent take turns placing letters. Whoever completes the word takes the bonus. Every win takes you 40 metres higher up the mountain. Coming soon to the App Store and Google Play.",
     "cta": ""
   },
   "tr": {
-    "tagline": "Türkçe kelime oyunu",
-    "text": "Telefonunuz için Türkçe bir kelime oyunu. Ayrıntılar yakında.",
+    "tagline": "Telefonunuz için Türkçe bulmaca düellosu",
+    "text": "Rakibinizle sırayla harf koyduğunuz Türkçe bir bulmaca oyunu. Kelimeyi bitiren bonusu kapar. Her galibiyet sizi dağda 40 metre yukarı taşır. Yakında App Store ve Google Play'de.",
     "cta": ""
   }
 }

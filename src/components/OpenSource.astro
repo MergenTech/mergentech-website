@@ -9,7 +9,7 @@ const { locale } = Astro.props;
 const t = texts(locale);
 const oss = await getOss();
 ---
-<section class="section" id="opensource" aria-labelledby="oss-title">
+<section class="section section-alt" id="opensource" aria-labelledby="oss-title">
   <div class="wrap oss-layout">
     <div class="oss-copy" data-reveal>
       <span class="eyebrow">{t.oss.eyebrow}</span>

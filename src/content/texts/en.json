@@ -63,6 +63,7 @@
     "status_development": "in development",
     "status_pilot": "pilot",
     "status_live": "live",
+    "status_soon": "coming soon",
     "more_title": "More to come",
     "more_text": "We are working on new products. As soon as something is ready, you will find it here."
   },

@@ -5,7 +5,7 @@ import { asset, type Locale } from '../lib/i18n';
 interface Props { locale: Locale }
 const { locale } = Astro.props;
 const t = texts(locale);
-const statusLabel = { development: t.products.status_development, pilot: t.products.status_pilot, live: t.products.status_live };
+const statusLabel = { development: t.products.status_development, pilot: t.products.status_pilot, soon: t.products.status_soon, live: t.products.status_live };
 const tiles = [
   { l: 'K', x: 104, y: 22, top: true },
   { l: 'E', x: 88, y: 56 }, { l: 'L', x: 120, y: 56 },
@@ -27,6 +27,8 @@ const tiles = [
             <div class="product-visual" aria-hidden="true">
               {p.image ? (
                 <img src={asset(p.image)} alt="" loading="lazy" />
+              ) : p.icon ? (
+                <img class="product-icon" src={asset(p.icon)} alt="" width="104" height="104" />
               ) : p.visual === 'letters' ? (
                 <svg class="viz" viewBox="0 0 240 140" focusable="false">
                   {tiles.map((tile, i) => (

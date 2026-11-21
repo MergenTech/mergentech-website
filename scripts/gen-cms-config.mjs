@@ -192,6 +192,7 @@ const config = {
           options: [
             { label: 'Geliştiriliyor', value: 'development' },
             { label: 'Pilot', value: 'pilot' },
+            { label: 'Yakında (mağaza onayı bekleniyor)', value: 'soon' },
             { label: 'Yayında', value: 'live' },
           ],
         },
@@ -206,6 +207,7 @@ const config = {
           ],
         },
         image,
+        { label: 'Uygulama simgesi (kare; çizimin yerine gösterilir)', name: 'icon', widget: 'image', required: false },
         { label: 'Ürün linki (boşsa iletişim bölümüne gider)', name: 'url', widget: 'string', required: false },
         ...perLocale([
           { label: 'Kısa slogan', name: 'tagline', widget: 'string' },

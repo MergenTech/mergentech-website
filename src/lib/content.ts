@@ -31,9 +31,10 @@ export type Product = {
   order: number;
   published: boolean;
   name: string;
-  status: 'development' | 'pilot' | 'live';
+  status: 'development' | 'pilot' | 'soon' | 'live';
   visual: 'document' | 'letters';
   image: string;
+  icon?: string;
   url: string;
 } & Localized<{ tagline: string; text: string; cta: string }>;
 
