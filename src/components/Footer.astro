@@ -12,7 +12,7 @@ const home = page(locale);
     <div class="footer-company">
       <span class="footer-brand" aria-hidden="true">mergen<span class="dot">.</span></span>
       <address>
-        {company.name} (<span lang={locale === 'nl' ? undefined : 'nl'}>{company.legal_form}</span>)<br />
+        {company.name}<br />
         {company.street}, {company.postal_code} {company.city}<br />
         <a href={`mailto:${company.email}`}>{company.email}</a><br />
         {t.footer.kvk}: {company.kvk}

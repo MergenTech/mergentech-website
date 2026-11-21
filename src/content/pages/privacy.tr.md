@@ -1,6 +1,6 @@
 ---
 title: Gizlilik bildirimi
-updated: 2026-11-14
+updated: 2026-11-22
 ---
 
 Mergen Tech gizliliğinize önem verir. Bu sayfada hangi verileri neden işlediğimizi kısaca okuyabilirsiniz.
@@ -13,13 +13,17 @@ Mergen Tech, Serdar Aydemir'e ait, Nijmegen (Hollanda) merkezli bir şahıs işl
 
 - **Çerez yok.** Bu web sitesi çerez yerleştirmez.
 - **İstatistik yok.** Ziyaretleri ölçmüyoruz ve takip aracı kullanmıyoruz.
-- **Form yok.** Bizimle kendi e-posta programınız üzerinden iletişime geçersiniz.
+- **Tek bir form.** İletişim formu yalnızca sizin yazdıklarınızı gönderir. Bunlarla ne yapıldığını aşağıda okuyabilirsiniz.
 - **Tercihler kendi cihazınızda.** Koyu modu seçerseniz ya da animasyonları kapatırsanız tarayıcınız bunu hatırlar (localStorage). Bu tercih cihazınızdan çıkmaz.
 - **Yazı tipleri.** Yazı tipleri kendi sitemizde barındırılır. Başka bir tarafa istek gitmez.
 
 ## Barındırma
 
 Bu web sitesi GitHub Pages (GitHub, Inc.) üzerinde barındırılır. GitHub, siteyi gösterebilmek ve güvenliğini sağlamak için IP adresiniz gibi teknik verileri sunucu kayıtlarında işler. Ayrıntılar için [GitHub gizlilik bildirimine](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) bakabilirsiniz.
+
+## İletişim formunu kullandığınızda
+
+İletişim formunu doldurduğunuzda adınızı, e-posta adresinizi, (yazdıysanız) kurumunuzu ve mesajınızı sorunuzu yanıtlamak için kullanırız. Formu bizim adımıza Forminit işler. Forminit'in bildirdiğine göre gönderiler AB içinde, İrlanda'daki sunucularda saklanır. Forminit gönderiyle birlikte IP adresiniz gibi teknik verileri de kaydeder. Gönderileri son iletişimden sonra en fazla 12 ay saklarız.
 
 ## Bize e-posta gönderdiğinizde
 

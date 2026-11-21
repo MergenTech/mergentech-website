@@ -13,6 +13,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
       <div class="section-head" data-reveal>
         <span class="eyebrow">{t.work.eyebrow}</span>
         <h2 class="h2" id="work-title">{t.work.title}</h2>
+        {t.work.intro && <p class="lead">{t.work.intro}</p>}
       </div>
 
       <div class="work-layout" data-tabs>

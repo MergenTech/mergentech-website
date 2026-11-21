@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Mergen Tech — Software die raak is",
-    "description": "Mergen Tech bouwt toegankelijke participatietools voor gemeenten en maatwerksoftware voor ondernemers. Open source waar het kan, WCAG 2.2 als standaard."
+    "title": "Mergen Tech — Software die voor iedereen werkt",
+    "description": "Mergen Tech bouwt software die vraagstukken van gemeenten en andere overheidsorganisaties oplost, en maatwerk voor ondernemers. Open source, WCAG 2.2."
   },
   "nav": {
     "services": "Diensten",
-    "work": "Werk",
+    "work": "Ervaring",
     "products": "Producten",
     "about": "Over",
     "opensource": "Open source",
@@ -19,10 +19,13 @@
   },
   "hero": {
     "prompt_command": "wat bouw je?",
-    "title": "Software die raak is",
-    "lead": "Mergen Tech bouwt toegankelijke participatietools voor gemeenten en maatwerksoftware voor ondernemers. Open source waar het kan, WCAG 2.2 als standaard.",
-    "cta_primary": "Bekijk werk",
-    "cta_secondary": "Neem contact op"
+    "title": "Software die voor iedereen werkt",
+    "lead": "Mergen Tech bouwt software die vraagstukken van gemeenten en andere overheidsorganisaties oplost, en maatwerk voor ondernemers. Open source waar het kan, WCAG 2.2 als standaard.",
+    "cta_primary": "Bekijk ervaring",
+    "cta_secondary": "Neem contact op",
+    "step_design": "ontwerp",
+    "step_build": "bouw",
+    "step_test": "test"
   },
   "trust": {
     "command": "ls gemeenten/",
@@ -34,8 +37,8 @@
     "title": "Twee sporen, één standaard.",
     "cards": [
       {
-        "title": "Voor gemeenten",
-        "text": "Participatietools die elke inwoner kan gebruiken. Gebouwd op OpenStad en getoetst op toegankelijkheid.",
+        "title": "Voor de overheid",
+        "text": "Van inwonersparticipatie tot toegankelijke documenten: software die aansluit op de praktijk van de overheid en die elke inwoner kan gebruiken.",
         "bullets": [
           "Plugins en widgets voor OpenStad Headless",
           "Digitoegankelijkheid: WCAG 2.2 en EN 301 549",
@@ -64,8 +67,9 @@
     "more_text": "We werken aan nieuwe producten. Zodra er iets klaar is, staat het hier."
   },
   "work": {
-    "eyebrow": "Uitgelicht werk",
+    "eyebrow": "Ervaring van de oprichter",
     "title": "Gebouwd voor echte inwoners.",
+    "intro": "Dit werk maakte Serdar Aydemir zelf, als developer in dienst van gemeente Nijmegen en als open source bijdrager. Het zijn geen opdrachten van Mergen Tech.",
     "role": "Rol",
     "visit": "Bekijk live",
     "code": "Bekijk de code",
@@ -92,8 +96,8 @@
   },
   "oss": {
     "eyebrow": "Open source",
-    "title": "Wat we leren, geven we terug.",
-    "text": "We dragen bij aan OpenStad Headless, het open source participatieplatform dat Nederlandse gemeenten samen gebruiken. Zo heeft elke gemeente er iets aan.",
+    "title": "Wat je leert, geef je terug.",
+    "text": "Serdar draagt bij aan OpenStad Headless, het open source participatieplatform dat Nederlandse gemeenten samen gebruiken. Dat doet hij deels vanuit zijn werk bij gemeente Nijmegen. Zo heeft elke gemeente er iets aan.",
     "button": "Bekijk op GitHub",
     "merged": "samengevoegd",
     "open": "in review",
@@ -136,32 +140,11 @@
     ],
     "photo_alt": "Portret van Serdar Aydemir"
   },
-  "pricing": {
-    "eyebrow": "Samenwerken",
-    "title": "Drie manieren om te starten.",
-    "models": [
-      {
-        "title": "Uurtarief",
-        "value": "op aanvraag",
-        "text": "Voor advies, toetsing en kleine klussen."
-      },
-      {
-        "title": "Vaste prijs",
-        "value": "per fase",
-        "text": "Duidelijke scope, duidelijk bedrag. Geen verrassingen."
-      },
-      {
-        "title": "Strippenkaart",
-        "value": "10 · 20 · 40 uur",
-        "text": "Voor onderhoud en doorontwikkeling."
-      }
-    ],
-    "note": "Gemeenten ontvangen een offerte op maat."
-  },
   "contact": {
     "eyebrow": "Contact",
     "title": "vertel wat je wilt bouwen",
     "text": "Stuur een e-mail met je vraag of idee. Je krijgt zo snel mogelijk antwoord, meestal binnen een paar werkdagen.",
+    "text_form": "Vul het formulier in met je vraag of idee. Je krijgt zo snel mogelijk antwoord, meestal binnen een paar werkdagen.",
     "audiences_intro": "Of kies wie je bent. Dan opent je e-mailprogramma met het juiste onderwerp.",
     "audiences": [
       {
@@ -182,7 +165,35 @@
     "copy_failed": "Kopiëren lukt niet. Het adres is:",
     "calendar": "Plan een kennismaking",
     "whatsapp": "WhatsApp",
-    "no_tracking": "Geen formulier, geen nieuwsbrief, geen tracking."
+    "no_tracking": "Geen nieuwsbrief, geen tracking.",
+    "form": {
+      "required_note": "Velden met een * zijn verplicht.",
+      "name": "Naam",
+      "email": "E-mailadres",
+      "organisation": "Organisatie",
+      "optional": "optioneel",
+      "type": "Ik neem contact op als",
+      "type_placeholder": "Maak een keuze",
+      "type_options": [
+        "Medewerker van een gemeente of overheid",
+        "Ondernemer",
+        "Particulier"
+      ],
+      "message": "Bericht",
+      "message_hint": "Vertel kort wat je zoekt of waar je tegenaan loopt.",
+      "submit": "Verstuur bericht",
+      "sending": "Bezig met versturen…",
+      "privacy": "We gebruiken je gegevens alleen om je bericht te beantwoorden.",
+      "privacy_link": "Privacyverklaring",
+      "error_name": "Vul je naam in.",
+      "error_email": "Vul een geldig e-mailadres in, bijvoorbeeld naam@voorbeeld.nl.",
+      "error_message": "Schrijf je bericht.",
+      "success_title": "Bedankt, je bericht is verzonden.",
+      "success_text": "Je krijgt zo snel mogelijk antwoord, meestal binnen een paar werkdagen.",
+      "failed": "Versturen lukt nu niet. Probeer het later opnieuw of stuur een e-mail naar",
+      "too_fast": "Je hebt net al een bericht verstuurd. Wacht een paar seconden en probeer het opnieuw.",
+      "or_mail": "Liever mailen?"
+    }
   },
   "footer": {
     "kvk": "KvK",

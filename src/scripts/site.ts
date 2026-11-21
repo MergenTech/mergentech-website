@@ -160,45 +160,90 @@ document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
   });
 });
 
-/* ---- hero: stippen bewegen mee met de aanwijzer ---- */
-const hero = document.querySelector<HTMLElement>('[data-hero]');
-const target = document.querySelector<SVGSVGElement>('[data-target]');
-if (hero && target && matchMedia('(hover: hover) and (pointer: fine)').matches) {
-  const dots = Array.from(target.querySelectorAll<SVGCircleElement>('.dots circle')).map((el) => ({
-    el,
-    x: Number(el.dataset.x),
-    y: Number(el.dataset.y),
-  }));
-  let frame = 0;
-  let px = 0;
-  let py = 0;
+/* ---- contactformulier: eigen foutmeldingen en versturen zonder de pagina te verlaten ---- */
+const contactForm = document.querySelector<HTMLFormElement>('[data-contact-form]');
+if (contactForm) {
+  type Field = HTMLInputElement | HTMLTextAreaElement;
+  const status = contactForm.querySelector<HTMLElement>('[data-form-status]')!;
+  const success = document.querySelector<HTMLElement>('[data-form-success]')!;
+  const button = contactForm.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+  const label = button.querySelector<HTMLElement>('[data-label]')!;
+  const idle = label.textContent!;
+  const fields = Array.from(contactForm.querySelectorAll<Field>('[data-error]'));
+  contactForm.noValidate = true;
 
-  const draw = () => {
-    frame = 0;
-    const box = target.getBoundingClientRect();
-    const scale = 420 / box.width;
-    const x = (px - box.left) * scale;
-    const y = (py - box.top) * scale;
-    for (const dot of dots) {
-      const dx = x - dot.x;
-      const dy = y - dot.y;
-      const dist = Math.hypot(dx, dy);
-      const pull = Math.max(0, 1 - dist / 170);
-      const tx = (dx / (dist || 1)) * pull * 9;
-      const ty = (dy / (dist || 1)) * pull * 9;
-      dot.el.style.transform = pull ? `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px) scale(${(1 + pull * 1.4).toFixed(2)})` : '';
-    }
+  const setError = (field: Field, message: string) => {
+    const box = document.getElementById(`${field.id}-error`)!;
+    if (message) field.setAttribute('aria-invalid', 'true');
+    else field.removeAttribute('aria-invalid');
+    box.textContent = message;
+    box.hidden = !message;
+  };
+  const check = (field: Field) => {
+    const ok = field.value.trim() !== '' && field.checkValidity();
+    setError(field, ok ? '' : field.dataset.error!);
+    return ok;
+  };
+  const say = (message: string) => {
+    status.textContent = message;
+    status.hidden = !message;
   };
 
-  hero.addEventListener('pointermove', (e) => {
-    if (!motionOn()) return;
-    px = e.clientX;
-    py = e.clientY;
-    frame ||= requestAnimationFrame(draw);
-  });
-  hero.addEventListener('pointerleave', () => {
-    if (frame) cancelAnimationFrame(frame);
-    frame = 0;
-    dots.forEach((dot) => (dot.el.style.transform = ''));
+  // een fout verdwijnt zodra het veld klopt, maar verschijnt niet tijdens het typen
+  fields.forEach((field) =>
+    field.addEventListener('input', () => {
+      if (field.hasAttribute('aria-invalid')) check(field);
+    }),
+  );
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    say('');
+    const invalid = fields.filter((field) => !check(field));
+    if (invalid.length) {
+      invalid[0].focus();
+      return;
+    }
+    button.disabled = true;
+    label.textContent = button.dataset.sending!;
+    try {
+      // lege optionele velden gaan niet mee
+      const body = new FormData(contactForm);
+      for (const [key, value] of [...body.entries()]) {
+        if (key.startsWith('fi-') && typeof value === 'string' && value.trim() === '') body.delete(key);
+      }
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body,
+        headers: { Accept: 'application/json' },
+      });
+      const data = await res.json().catch(() => null);
+      if (res.ok && data?.success !== false) {
+        contactForm.hidden = true;
+        success.hidden = false;
+        success.focus();
+      } else if (res.status === 429) {
+        say(contactForm.dataset.tooFast!);
+      } else if (res.status === 400 && String(data?.error ?? '').includes('EMAIL')) {
+        const email = fields.find((field) => field.type === 'email')!;
+        setError(email, email.dataset.error!);
+        email.focus();
+      } else {
+        say(contactForm.dataset.failed!);
+      }
+    } catch {
+      if (navigator.onLine) {
+        // de browser kon het verzoek niet doen: verstuur het formulier dan op de gewone manier
+        contactForm
+          .querySelectorAll<HTMLInputElement | HTMLSelectElement>('[name^="fi-"]')
+          .forEach((el) => (el.disabled = el.value.trim() === ''));
+        contactForm.submit();
+        return;
+      }
+      say(contactForm.dataset.failed!);
+    } finally {
+      button.disabled = false;
+      label.textContent = idle;
+    }
   });
 }

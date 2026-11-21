@@ -1,6 +1,6 @@
 ---
 title: Privacy statement
-updated: 2026-11-14
+updated: 2026-11-22
 ---
 
 Mergen Tech cares about your privacy. This page briefly explains which data we process and why.
@@ -13,13 +13,17 @@ Mergen Tech is a sole proprietorship run by Serdar Aydemir, based in Nijmegen, t
 
 - **No cookies.** This website does not set cookies.
 - **No analytics.** We do not measure visits or use tracking.
-- **No forms.** You contact us through your own email program.
+- **One form.** The contact form only sends what you fill in yourself. Below you can read what happens with it.
 - **Preferences on your own device.** If you choose dark mode or switch animations off, your browser remembers that (localStorage). That choice never leaves your device.
 - **Fonts.** The fonts are served from our own website. No request goes to another party.
 
 ## Hosting
 
 This website is hosted on GitHub Pages (GitHub, Inc.). GitHub processes technical data such as your IP address in server logs, in order to serve and secure the website. See the [GitHub privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) for more information.
+
+## When you use the contact form
+
+When you fill in the contact form, we use your name, email address, your organisation (if you enter it) and your message to answer your question. The form is processed for us by Forminit. According to Forminit, submissions are stored on servers in Ireland, within the EU. Forminit also records technical data with a submission, such as your IP address. We keep submissions for a maximum of 12 months after the last contact.
 
 ## When you email us
 

@@ -1,12 +1,15 @@
 ---
 import { texts, company } from '../lib/content';
-import type { Locale } from '../lib/i18n';
+import { page, type Locale } from '../lib/i18n';
 
 interface Props { locale: Locale }
 const { locale } = Astro.props;
 const t = texts(locale);
+const f = t.contact.form;
 const mailto = (subject: string) => `mailto:${company.email}?subject=${encodeURIComponent(subject)}`;
 const wa = company.whatsapp_number.replace(/\D/g, '');
+// Het formulier verschijnt zodra company.form_id is ingevuld (Forminit). Zonder id blijft het bij e-mail.
+const formAction = company.form_id ? `https://forminit.com/f/${company.form_id}` : '';
 ---
 <section class="section band" id="contact" aria-labelledby="contact-title">
   <div class="wrap contact-layout">
@@ -15,12 +18,76 @@ const wa = company.whatsapp_number.replace(/\D/g, '');
       <h2 class="h2 contact-title" id="contact-title">
         <span class="gt" aria-hidden="true">&gt; </span>{t.contact.title}<span class="dot" aria-hidden="true">.</span>
       </h2>
-      <p>{t.contact.text}</p>
+      <p>{formAction ? t.contact.text_form : t.contact.text}</p>
       <p class="contact-foot">{t.contact.no_tracking}</p>
     </div>
 
     <div class="contact-card" data-reveal>
-      <div>
+      {formAction && (
+        <form
+          class="contact-form"
+          action={formAction}
+          method="post"
+          data-contact-form
+          data-failed={`${f.failed} ${company.email}.`}
+          data-too-fast={f.too_fast}
+        >
+          <p class="form-note">{f.required_note}</p>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-name">{f.name} <span class="req" aria-hidden="true">*</span></label>
+              <input id="cf-name" name="fi-sender-fullName" type="text" autocomplete="name" required aria-describedby="cf-name-error" data-error={f.error_name} />
+              <p class="field-error" id="cf-name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="cf-email">{f.email} <span class="req" aria-hidden="true">*</span></label>
+              <input id="cf-email" name="fi-sender-email" type="email" autocomplete="email" required aria-describedby="cf-email-error" data-error={f.error_email} />
+              <p class="field-error" id="cf-email-error" hidden></p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="cf-org">{f.organisation} <span class="opt">({f.optional})</span></label>
+              <input id="cf-org" name="fi-sender-company" type="text" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="cf-type">{f.type} <span class="opt">({f.optional})</span></label>
+              <select id="cf-type" name="fi-select-type">
+                <option value="">{f.type_placeholder}</option>
+                {f.type_options.map((o) => <option value={o}>{o}</option>)}
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="cf-message">{f.message} <span class="req" aria-hidden="true">*</span></label>
+            <p class="field-hint" id="cf-message-hint">{f.message_hint}</p>
+            <textarea id="cf-message" name="fi-text-message" rows="5" required aria-describedby="cf-message-hint cf-message-error" data-error={f.error_message}></textarea>
+            <p class="field-error" id="cf-message-error" hidden></p>
+          </div>
+
+          <input type="hidden" name="_gotcha" style="display:none !important" />
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" data-sending={f.sending}>
+              <span data-label>{f.submit}</span> <span class="arrow" aria-hidden="true">→</span>
+            </button>
+            <p class="form-privacy">{f.privacy} <a href={page(locale, 'privacy')}>{f.privacy_link}</a></p>
+          </div>
+          <p class="form-status" role="alert" data-form-status hidden></p>
+        </form>
+      )}
+      {formAction && (
+        <div class="form-success" role="status" tabindex="-1" data-form-success hidden>
+          <strong>&gt; {f.success_title}</strong>
+          <p>{f.success_text}</p>
+        </div>
+      )}
+
+      <div class:list={[{ 'mail-alt': formAction }]}>
+        {formAction && <p class="mail-alt-label">{f.or_mail}</p>}
         <div class="mail-row">
           <a class="mail-link" href={`mailto:${company.email}`}>{company.email}</a>
           <button type="button" class="copy-btn" data-copy={company.email} data-copied={`> ${t.contact.copied}.`} data-copy-failed={`${t.contact.copy_failed} ${company.email}`}>{t.contact.copy}</button>
@@ -28,17 +95,21 @@ const wa = company.whatsapp_number.replace(/\D/g, '');
         <p class="copy-status" role="status" data-copy-status></p>
       </div>
 
-      <p class="audiences-intro" id="audiences-intro">{t.contact.audiences_intro}</p>
-      <ul class="audiences" role="list" aria-labelledby="audiences-intro">
-        {t.contact.audiences.map((a) => (
-          <li>
-            <a class="audience" href={mailto(a.subject)}>
-              <span>{a.label}</span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-        ))}
-      </ul>
+      {!formAction && (
+        <>
+          <p class="audiences-intro" id="audiences-intro">{t.contact.audiences_intro}</p>
+          <ul class="audiences" role="list" aria-labelledby="audiences-intro">
+            {t.contact.audiences.map((a) => (
+              <li>
+                <a class="audience" href={mailto(a.subject)}>
+                  <span>{a.label}</span>
+                  <span class="arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
 
       {(company.calendar_url || company.linkedin_url || company.github_url || wa) && (
         <ul class="contact-extra" role="list">

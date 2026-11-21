@@ -21,12 +21,21 @@ const typed = words
     return `<span class="word">${chars}${tail}</span>`;
   })
   .join('');
-const total = i;
 
-const dots: { x: number; y: number }[] = [];
-for (let r = 0; r < 7; r++) for (let c = 0; c < 7; c++) if (!(r === 3 && c === 3)) dots.push({ x: 30 + c * 60, y: 30 + r * 60 });
+// Het beeld rechts: een pagina die zichzelf opbouwt (schets → interface → toegankelijkheidscheck).
+const cards = [
+  { x: 36, value: 78 },
+  { x: 177, value: 52 },
+  { x: 318, value: 96 },
+];
+const pins = [
+  { x: 288, y: 178, active: false },
+  { x: 408, y: 156, active: false },
+  { x: 350, y: 192, active: true },
+];
+const steps = [t.hero.step_design, t.hero.step_build, t.hero.step_test];
 ---
-<section class="hero band" aria-labelledby="hero-title" style={`--n:${total}`} data-hero>
+<section class="hero band" aria-labelledby="hero-title">
   <div class="wrap hero-inner">
     <div class="hero-copy">
       <div class="terminal">
@@ -46,19 +55,127 @@ for (let r = 0; r < 7; r++) for (let c = 0; c < 7; c++) if (!(r === 3 && c === 3
       </div>
     </div>
 
-    <div class="hero-visual" aria-hidden="true">
-      <svg class="target" viewBox="0 0 420 420" data-target focusable="false">
-        <g class="dots">
-          {dots.map((d) => <circle cx={d.x} cy={d.y} r="2.2" data-x={d.x} data-y={d.y}></circle>)}
+    <div class="hero-visual" aria-hidden="true" data-inview>
+      <svg class="build" viewBox="-6 0 492 372" focusable="false">
+        <defs>
+          <clipPath id="build-map"><rect x="254" y="106" width="190" height="120" rx="10"></rect></clipPath>
+        </defs>
+
+        <!-- venster -->
+        <g class="b-window">
+          <rect x="12" y="10" width="456" height="318" rx="14" fill="#F3F0E8"></rect>
+          <path d="M12 46V24a14 14 0 0 1 14-14h428a14 14 0 0 1 14 14v22z" fill="#E7E2D5"></path>
+          <path d="M12 46.5h456" stroke="#D5CEBD"></path>
+          <circle cx="32" cy="28" r="4" fill="#C4BBA7"></circle>
+          <circle cx="46" cy="28" r="4" fill="#C4BBA7"></circle>
+          <circle cx="60" cy="28" r="4" fill="#C2571A"></circle>
+          <rect x="150" y="19" width="180" height="18" rx="9" fill="#F3F0E8"></rect>
+          <circle cx="163" cy="28" r="2.5" fill="#8C8679"></circle>
+          <rect x="172" y="26" width="96" height="4" rx="2" fill="#B5AD9B"></rect>
         </g>
-        <circle class="ring ring-3" style="--r:2" cx="210" cy="210" r="150"></circle>
-        <circle class="ring ring-2" style="--r:1" cx="210" cy="210" r="100"></circle>
-        <circle class="ring ring-1" style="--r:0" cx="210" cy="210" r="50"></circle>
-        <path class="arrow-line" d="M132 132 L203 203"></path>
-        <circle class="impact" cx="210" cy="210" r="10"></circle>
-        <circle class="impact impact-2" cx="210" cy="210" r="10"></circle>
-        <circle class="bullseye" cx="210" cy="210" r="10"></circle>
+
+        <!-- stap 1: schets -->
+        <g class="b-wf">
+          <rect style="--i:0" x="36" y="58" width="408" height="24" rx="6"></rect>
+          <g style="--i:1">
+            <rect x="36" y="106" width="194" height="120" rx="8"></rect>
+            <path d="M50 132h120M50 152h86M50 180h150M50 194h128"></path>
+          </g>
+          <g style="--i:2">
+            <rect x="254" y="106" width="190" height="120" rx="10"></rect>
+            <path d="M262 112l174 108M436 112L262 220"></path>
+          </g>
+          {cards.map((c, n) => <rect style={`--i:${3 + n}`} x={c.x} y="244" width="126" height="70" rx="9"></rect>)}
+        </g>
+
+        <!-- stap 2: interface -->
+        <g class="b-ui" style="--i:0">
+          <rect x="36" y="60" width="20" height="20" rx="5.5" fill="#15233B"></rect>
+          <path d="M42 65.5l5 4.5-5 4.5" fill="none" stroke="#F3F0E8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="50.5" cy="74.5" r="1.7" fill="#C2571A"></circle>
+          <rect x="246" y="68" width="34" height="4" rx="2" fill="#15233B" opacity="0.4"></rect>
+          <rect x="292" y="68" width="34" height="4" rx="2" fill="#15233B" opacity="0.4"></rect>
+          <rect x="338" y="68" width="28" height="4" rx="2" fill="#15233B" opacity="0.4"></rect>
+          <rect x="384" y="59" width="60" height="22" rx="7" fill="#C2571A"></rect>
+          <rect x="398" y="68" width="32" height="4" rx="2" fill="#fff"></rect>
+          <path d="M36 92.5h408" stroke="#D5CEBD"></path>
+        </g>
+
+        <g class="b-ui" style="--i:1">
+          <rect x="36" y="112" width="48" height="5" rx="2.5" fill="#C2571A"></rect>
+          <rect x="36" y="128" width="172" height="13" rx="3.5" fill="#15233B"></rect>
+          <rect x="36" y="148" width="124" height="13" rx="3.5" fill="#15233B"></rect>
+          <rect x="36" y="174" width="180" height="5" rx="2.5" fill="#8C8679" opacity="0.75"></rect>
+          <rect x="36" y="185" width="156" height="5" rx="2.5" fill="#8C8679" opacity="0.75"></rect>
+          <rect x="36" y="202" width="78" height="24" rx="7" fill="#C2571A"></rect>
+          <rect x="55" y="212" width="40" height="4" rx="2" fill="#fff"></rect>
+          <rect x="122.75" y="202.75" width="64" height="22.5" rx="6.5" fill="none" stroke="#15233B" stroke-width="1.5"></rect>
+          <rect x="139" y="212" width="32" height="4" rx="2" fill="#15233B"></rect>
+        </g>
+
+        <g class="b-ui" style="--i:2">
+          <rect x="254" y="106" width="190" height="120" rx="10" fill="#E7E2D5"></rect>
+          <g clip-path="url(#build-map)">
+            <path d="M372 96c26 18 50 20 84 12v52c-40 6-66-8-84-30z" fill="#D9D2C0"></path>
+            <path d="M246 148c44-10 70 22 112 18s62-22 96-14" fill="none" stroke="#F3F0E8" stroke-width="7" stroke-linecap="round"></path>
+            <path d="M318 98c10 40-14 72-2 136" fill="none" stroke="#F3F0E8" stroke-width="7" stroke-linecap="round"></path>
+            <path d="M246 206l84-8 60 14 64-10" fill="none" stroke="#F3F0E8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M394 98l-10 128" fill="none" stroke="#F3F0E8" stroke-width="4" stroke-linecap="round"></path>
+          </g>
+          <rect x="254.5" y="106.5" width="189" height="119" rx="9.5" fill="none" stroke="#D5CEBD"></rect>
+        </g>
+        {pins.map((p, n) => (
+          <g transform={`translate(${p.x} ${p.y})`}>
+            <g class="b-pin" style={`--i:${n}`}>
+              <ellipse cx="0" cy="0.5" rx="5" ry="1.8" fill="#15233B" opacity="0.18"></ellipse>
+              <path
+                d={p.active ? 'M0 0c-8.5-10.5-11-15-11-20a11 11 0 1 1 22 0c0 5-2.5 9.5-11 20z' : 'M0 0c-6.5-8-8.5-11.5-8.5-15.5a8.5 8.5 0 1 1 17 0c0 4-2 7.5-8.5 15.5z'}
+                fill={p.active ? '#C2571A' : '#15233B'}
+              ></path>
+              <circle cx="0" cy={p.active ? -20 : -15.5} r={p.active ? 4 : 3} fill="#F3F0E8"></circle>
+            </g>
+          </g>
+        ))}
+        <g class="b-pop">
+          <rect x="314.5" y="118.5" width="72" height="34" rx="7" fill="#fff" stroke="#D5CEBD"></rect>
+          <rect x="324" y="128" width="40" height="5" rx="2.5" fill="#15233B"></rect>
+          <rect x="324" y="139" width="52" height="4" rx="2" fill="#8C8679" opacity="0.75"></rect>
+        </g>
+
+        {cards.map((c, n) => (
+          <g class="b-ui" style={`--i:${3 + n}`}>
+            <rect x={c.x + 0.5} y="244.5" width="125" height="69" rx="8.5" fill="#fff" stroke="#D5CEBD"></rect>
+            <rect x={c.x + 12} y="256" width="18" height="18" rx="5" fill={n === 1 ? '#15233B' : '#E7E2D5'}></rect>
+            <rect x={c.x + 38} y="259" width="60" height="5" rx="2.5" fill="#15233B"></rect>
+            <rect x={c.x + 38} y="268" width="42" height="4" rx="2" fill="#8C8679" opacity="0.75"></rect>
+            <rect x={c.x + 12} y="294" width="102" height="6" rx="3" fill="#E7E2D5"></rect>
+            <rect class="b-bar" style={`--n:${n}`} x={c.x + 12} y="294" width={c.value} height="6" rx="3" fill="#C2571A"></rect>
+          </g>
+        ))}
+
+        <!-- stap 3: toegankelijkheidscheck (toetsenbordfocus loopt de pagina langs) -->
+        <rect class="b-focus" style="--i:0" x="31.5" y="197.5" width="87" height="33" rx="11"></rect>
+        <rect class="b-focus" style="--i:1" x="310" y="114" width="81" height="43" rx="11"></rect>
+        <rect class="b-focus" style="--i:2" x="172.5" y="239.5" width="135" height="79" rx="13"></rect>
+
+        <g class="b-badge">
+          <rect x="326.75" y="319.75" width="154.5" height="42.5" rx="21.25" fill="#0E1729" stroke="#6B7C9C" stroke-width="1.5"></rect>
+          <circle cx="349" cy="341" r="13" fill="#C2571A"></circle>
+          <path d="M343 341.5l4.2 4.2 7.8-8.4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+          <text x="370" y="345.7">WCAG 2.2 AA</text>
+        </g>
       </svg>
+
+      <ol class="hero-steps">
+        {steps.map((label, n) => (
+          <li style={`--i:${n}`}>
+            <span class="step-check">
+              <svg viewBox="0 0 16 16" focusable="false"><path d="M4.2 8.3l2.6 2.6 5-5.4"></path></svg>
+            </span>
+            {label}
+          </li>
+        ))}
+      </ol>
     </div>
   </div>
 </section>

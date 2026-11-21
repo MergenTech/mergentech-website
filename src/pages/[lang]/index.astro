@@ -9,7 +9,6 @@ import A11y from '../../components/A11y.astro';
 import OpenSource from '../../components/OpenSource.astro';
 import Process from '../../components/Process.astro';
 import About from '../../components/About.astro';
-import Pricing from '../../components/Pricing.astro';
 import Contact from '../../components/Contact.astro';
 import { LOCALES, type Locale } from '../../lib/i18n';
 
@@ -29,6 +28,5 @@ const locale = Astro.params.lang as Locale;
   <OpenSource locale={locale} />
   <Process locale={locale} />
   <About locale={locale} />
-  <Pricing locale={locale} />
   <Contact locale={locale} />
 </Base>

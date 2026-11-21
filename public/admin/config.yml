@@ -107,6 +107,18 @@ collections:
                 name: cta_secondary
                 widget: string
                 required: false
+              - label: Step design
+                name: step_design
+                widget: string
+                required: false
+              - label: Step build
+                name: step_build
+                widget: string
+                required: false
+              - label: Step test
+                name: step_test
+                widget: string
+                required: false
           - label: Belediyeler satırı
             name: trust
             widget: object
@@ -202,6 +214,10 @@ collections:
               - label: Title
                 name: title
                 widget: string
+                required: false
+              - label: Intro
+                name: intro
+                widget: text
                 required: false
               - label: Role
                 name: role
@@ -336,40 +352,6 @@ collections:
                 name: photo_alt
                 widget: string
                 required: false
-          - label: Birlikte çalışmak (fiyat modelleri)
-            name: pricing
-            widget: object
-            collapsed: true
-            fields:
-              - label: Eyebrow
-                name: eyebrow
-                widget: string
-                required: false
-              - label: Title
-                name: title
-                widget: string
-                required: false
-              - label: Models
-                name: models
-                widget: list
-                summary: "{{fields.title}}"
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                    required: false
-                  - label: Value
-                    name: value
-                    widget: string
-                    required: false
-                  - label: Text
-                    name: text
-                    widget: string
-                    required: false
-              - label: Note
-                name: note
-                widget: string
-                required: false
           - label: İletişim
             name: contact
             widget: object
@@ -385,6 +367,10 @@ collections:
                 required: false
               - label: Text
                 name: text
+                widget: text
+                required: false
+              - label: Text form
+                name: text_form
                 widget: text
                 required: false
               - label: Audiences intro
@@ -428,6 +414,102 @@ collections:
                 name: no_tracking
                 widget: string
                 required: false
+              - label: Form
+                name: form
+                widget: object
+                collapsed: true
+                fields:
+                  - label: Required note
+                    name: required_note
+                    widget: string
+                    required: false
+                  - label: Name
+                    name: name
+                    widget: string
+                    required: false
+                  - label: Email
+                    name: email
+                    widget: string
+                    required: false
+                  - label: Organisation
+                    name: organisation
+                    widget: string
+                    required: false
+                  - label: Optional
+                    name: optional
+                    widget: string
+                    required: false
+                  - label: Type
+                    name: type
+                    widget: string
+                    required: false
+                  - label: Type placeholder
+                    name: type_placeholder
+                    widget: string
+                    required: false
+                  - label: Type options
+                    name: type_options
+                    widget: list
+                    field:
+                      label: Metin
+                      name: item
+                      widget: text
+                  - label: Message
+                    name: message
+                    widget: string
+                    required: false
+                  - label: Message hint
+                    name: message_hint
+                    widget: string
+                    required: false
+                  - label: Submit
+                    name: submit
+                    widget: string
+                    required: false
+                  - label: Sending
+                    name: sending
+                    widget: string
+                    required: false
+                  - label: Privacy
+                    name: privacy
+                    widget: string
+                    required: false
+                  - label: Privacy link
+                    name: privacy_link
+                    widget: string
+                    required: false
+                  - label: Error name
+                    name: error_name
+                    widget: string
+                    required: false
+                  - label: Error email
+                    name: error_email
+                    widget: string
+                    required: false
+                  - label: Error message
+                    name: error_message
+                    widget: string
+                    required: false
+                  - label: Success title
+                    name: success_title
+                    widget: string
+                    required: false
+                  - label: Success text
+                    name: success_text
+                    widget: text
+                    required: false
+                  - label: Failed
+                    name: failed
+                    widget: text
+                    required: false
+                  - label: Too fast
+                    name: too_fast
+                    widget: text
+                    required: false
+                  - label: Or mail
+                    name: or_mail
+                    widget: string
+                    required: false
           - label: Footer
             name: footer
             widget: object
@@ -585,6 +667,18 @@ collections:
                 name: cta_secondary
                 widget: string
                 required: false
+              - label: Step design
+                name: step_design
+                widget: string
+                required: false
+              - label: Step build
+                name: step_build
+                widget: string
+                required: false
+              - label: Step test
+                name: step_test
+                widget: string
+                required: false
           - label: Belediyeler satırı
             name: trust
             widget: object
@@ -680,6 +774,10 @@ collections:
               - label: Title
                 name: title
                 widget: string
+                required: false
+              - label: Intro
+                name: intro
+                widget: text
                 required: false
               - label: Role
                 name: role
@@ -814,40 +912,6 @@ collections:
                 name: photo_alt
                 widget: string
                 required: false
-          - label: Birlikte çalışmak (fiyat modelleri)
-            name: pricing
-            widget: object
-            collapsed: true
-            fields:
-              - label: Eyebrow
-                name: eyebrow
-                widget: string
-                required: false
-              - label: Title
-                name: title
-                widget: string
-                required: false
-              - label: Models
-                name: models
-                widget: list
-                summary: "{{fields.title}}"
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                    required: false
-                  - label: Value
-                    name: value
-                    widget: string
-                    required: false
-                  - label: Text
-                    name: text
-                    widget: string
-                    required: false
-              - label: Note
-                name: note
-                widget: string
-                required: false
           - label: İletişim
             name: contact
             widget: object
@@ -863,6 +927,10 @@ collections:
                 required: false
               - label: Text
                 name: text
+                widget: text
+                required: false
+              - label: Text form
+                name: text_form
                 widget: text
                 required: false
               - label: Audiences intro
@@ -906,6 +974,102 @@ collections:
                 name: no_tracking
                 widget: string
                 required: false
+              - label: Form
+                name: form
+                widget: object
+                collapsed: true
+                fields:
+                  - label: Required note
+                    name: required_note
+                    widget: string
+                    required: false
+                  - label: Name
+                    name: name
+                    widget: string
+                    required: false
+                  - label: Email
+                    name: email
+                    widget: string
+                    required: false
+                  - label: Organisation
+                    name: organisation
+                    widget: string
+                    required: false
+                  - label: Optional
+                    name: optional
+                    widget: string
+                    required: false
+                  - label: Type
+                    name: type
+                    widget: string
+                    required: false
+                  - label: Type placeholder
+                    name: type_placeholder
+                    widget: string
+                    required: false
+                  - label: Type options
+                    name: type_options
+                    widget: list
+                    field:
+                      label: Metin
+                      name: item
+                      widget: text
+                  - label: Message
+                    name: message
+                    widget: string
+                    required: false
+                  - label: Message hint
+                    name: message_hint
+                    widget: string
+                    required: false
+                  - label: Submit
+                    name: submit
+                    widget: string
+                    required: false
+                  - label: Sending
+                    name: sending
+                    widget: string
+                    required: false
+                  - label: Privacy
+                    name: privacy
+                    widget: string
+                    required: false
+                  - label: Privacy link
+                    name: privacy_link
+                    widget: string
+                    required: false
+                  - label: Error name
+                    name: error_name
+                    widget: string
+                    required: false
+                  - label: Error email
+                    name: error_email
+                    widget: string
+                    required: false
+                  - label: Error message
+                    name: error_message
+                    widget: string
+                    required: false
+                  - label: Success title
+                    name: success_title
+                    widget: string
+                    required: false
+                  - label: Success text
+                    name: success_text
+                    widget: text
+                    required: false
+                  - label: Failed
+                    name: failed
+                    widget: text
+                    required: false
+                  - label: Too fast
+                    name: too_fast
+                    widget: text
+                    required: false
+                  - label: Or mail
+                    name: or_mail
+                    widget: string
+                    required: false
           - label: Footer
             name: footer
             widget: object
@@ -1063,6 +1227,18 @@ collections:
                 name: cta_secondary
                 widget: string
                 required: false
+              - label: Step design
+                name: step_design
+                widget: string
+                required: false
+              - label: Step build
+                name: step_build
+                widget: string
+                required: false
+              - label: Step test
+                name: step_test
+                widget: string
+                required: false
           - label: Belediyeler satırı
             name: trust
             widget: object
@@ -1158,6 +1334,10 @@ collections:
               - label: Title
                 name: title
                 widget: string
+                required: false
+              - label: Intro
+                name: intro
+                widget: text
                 required: false
               - label: Role
                 name: role
@@ -1292,40 +1472,6 @@ collections:
                 name: photo_alt
                 widget: string
                 required: false
-          - label: Birlikte çalışmak (fiyat modelleri)
-            name: pricing
-            widget: object
-            collapsed: true
-            fields:
-              - label: Eyebrow
-                name: eyebrow
-                widget: string
-                required: false
-              - label: Title
-                name: title
-                widget: string
-                required: false
-              - label: Models
-                name: models
-                widget: list
-                summary: "{{fields.title}}"
-                fields:
-                  - label: Title
-                    name: title
-                    widget: string
-                    required: false
-                  - label: Value
-                    name: value
-                    widget: string
-                    required: false
-                  - label: Text
-                    name: text
-                    widget: string
-                    required: false
-              - label: Note
-                name: note
-                widget: string
-                required: false
           - label: İletişim
             name: contact
             widget: object
@@ -1341,6 +1487,10 @@ collections:
                 required: false
               - label: Text
                 name: text
+                widget: text
+                required: false
+              - label: Text form
+                name: text_form
                 widget: text
                 required: false
               - label: Audiences intro
@@ -1384,6 +1534,102 @@ collections:
                 name: no_tracking
                 widget: string
                 required: false
+              - label: Form
+                name: form
+                widget: object
+                collapsed: true
+                fields:
+                  - label: Required note
+                    name: required_note
+                    widget: string
+                    required: false
+                  - label: Name
+                    name: name
+                    widget: string
+                    required: false
+                  - label: Email
+                    name: email
+                    widget: string
+                    required: false
+                  - label: Organisation
+                    name: organisation
+                    widget: string
+                    required: false
+                  - label: Optional
+                    name: optional
+                    widget: string
+                    required: false
+                  - label: Type
+                    name: type
+                    widget: string
+                    required: false
+                  - label: Type placeholder
+                    name: type_placeholder
+                    widget: string
+                    required: false
+                  - label: Type options
+                    name: type_options
+                    widget: list
+                    field:
+                      label: Metin
+                      name: item
+                      widget: text
+                  - label: Message
+                    name: message
+                    widget: string
+                    required: false
+                  - label: Message hint
+                    name: message_hint
+                    widget: string
+                    required: false
+                  - label: Submit
+                    name: submit
+                    widget: string
+                    required: false
+                  - label: Sending
+                    name: sending
+                    widget: string
+                    required: false
+                  - label: Privacy
+                    name: privacy
+                    widget: string
+                    required: false
+                  - label: Privacy link
+                    name: privacy_link
+                    widget: string
+                    required: false
+                  - label: Error name
+                    name: error_name
+                    widget: string
+                    required: false
+                  - label: Error email
+                    name: error_email
+                    widget: string
+                    required: false
+                  - label: Error message
+                    name: error_message
+                    widget: string
+                    required: false
+                  - label: Success title
+                    name: success_title
+                    widget: string
+                    required: false
+                  - label: Success text
+                    name: success_text
+                    widget: text
+                    required: false
+                  - label: Failed
+                    name: failed
+                    widget: text
+                    required: false
+                  - label: Too fast
+                    name: too_fast
+                    widget: text
+                    required: false
+                  - label: Or mail
+                    name: or_mail
+                    widget: string
+                    required: false
           - label: Footer
             name: footer
             widget: object
@@ -1671,9 +1917,6 @@ collections:
           - label: Şirket adı
             name: name
             widget: string
-          - label: Hukuki yapı
-            name: legal_form
-            widget: string
           - label: Kurucu
             name: founder
             widget: string
@@ -1700,6 +1943,10 @@ collections:
           - label: E-posta
             name: email
             widget: string
+          - label: "İletişim formu: Forminit form kimliği (boşsa form gösterilmez)"
+            name: form_id
+            widget: string
+            required: false
           - label: Takvim linki (Cal.com vb.)
             name: calendar_url
             widget: string

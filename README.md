@@ -22,7 +22,7 @@ Token aanmaken: GitHub → Settings → Developer settings → Personal access t
 | Gemeenten en organisaties | `src/content/gemeenten.json` (`relation`: `client` of `experience`) |
 | Projecten | `src/content/projects/*.json` (één bestand per project) |
 | Producten | `src/content/products/*.json` |
-| Bedrijfsgegevens, e-mail, links | `src/content/company.json` |
+| Bedrijfsgegevens, e-mail, links, contactformulier (`form_id` van Forminit; leeg = geen formulier) | `src/content/company.json` |
 | Open-source-lijst (GitHub) | `src/content/oss.json` |
 | Privacy en colofon | `src/content/pages/*.md` |
 | Kelime Zirvesi: privacy en voorwaarden (Turks, `/kelime-zirvesi/gizlilik/` en `/kosullar/`) | `src/content/kelime-zirvesi/*.md` — kopie van `assets/legal/*_tr.md` uit de app-repo; daar eerst wijzigen |

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Mergen Tech — Hedefi tutturan yazılım",
-    "description": "Mergen Tech, Hollanda belediyeleri için erişilebilir katılım araçları ve işletmeler için özel yazılım geliştirir. Mümkün olan her yerde açık kaynak, standart olarak WCAG 2.2."
+    "title": "Mergen Tech — Herkesin kullanabildiği yazılım",
+    "description": "Mergen Tech, Hollanda'da belediyelerin ve diğer kamu kurumlarının sorunlarını çözen yazılımlar ve işletmeler için özel yazılım geliştirir. Açık kaynak, WCAG 2.2."
   },
   "nav": {
     "services": "Hizmetler",
-    "work": "Projeler",
+    "work": "Deneyim",
     "products": "Ürünler",
     "about": "Hakkında",
     "opensource": "Açık kaynak",
@@ -19,10 +19,13 @@
   },
   "hero": {
     "prompt_command": "ne geliştiriyorsun?",
-    "title": "Hedefi tutturan yazılım",
-    "lead": "Mergen Tech, belediyeler için erişilebilir katılım araçları ve işletmeler için özel yazılım geliştirir. Mümkün olan her yerde açık kaynak, standart olarak WCAG 2.2.",
-    "cta_primary": "Projelere bak",
-    "cta_secondary": "İletişime geç"
+    "title": "Herkesin kullanabildiği yazılım",
+    "lead": "Mergen Tech, belediyelerin ve diğer kamu kurumlarının sorunlarını çözen yazılımlar ve işletmeler için özel yazılım geliştirir. Mümkün olan her yerde açık kaynak, standart olarak WCAG 2.2.",
+    "cta_primary": "Deneyime bak",
+    "cta_secondary": "İletişime geç",
+    "step_design": "tasarım",
+    "step_build": "geliştirme",
+    "step_test": "test"
   },
   "trust": {
     "command": "ls belediyeler/",
@@ -34,8 +37,8 @@
     "title": "İki alan, tek standart.",
     "cards": [
       {
-        "title": "Belediyeler için",
-        "text": "Her vatandaşın kullanabildiği katılım araçları. OpenStad üzerine kurulu ve erişilebilirlik açısından test edilmiş.",
+        "title": "Kamu kurumları için",
+        "text": "Vatandaş katılımından erişilebilir belgelere: kamunun işleyişine uyan ve her vatandaşın kullanabildiği yazılımlar.",
         "bullets": [
           "OpenStad Headless için eklenti ve widget'lar",
           "Dijital erişilebilirlik: WCAG 2.2 ve EN 301 549",
@@ -64,8 +67,9 @@
     "more_text": "Yeni ürünler üzerinde çalışıyoruz. Hazır olan burada yerini alacak."
   },
   "work": {
-    "eyebrow": "Öne çıkan projeler",
+    "eyebrow": "Kurucunun deneyimi",
     "title": "Gerçek vatandaşlar için geliştirildi.",
+    "intro": "Bu işleri Serdar Aydemir kendisi yaptı: Nijmegen Belediyesi'nde çalışan bir geliştirici ve açık kaynak katkıcısı olarak. Mergen Tech'e verilmiş işler değildir.",
     "role": "Rol",
     "visit": "Canlı gör",
     "code": "Koda bak",
@@ -92,8 +96,8 @@
   },
   "oss": {
     "eyebrow": "Açık kaynak",
-    "title": "Öğrendiğimizi geri veriyoruz.",
-    "text": "Hollanda belediyelerinin ortak kullandığı açık kaynak katılım platformu OpenStad Headless'e katkı veriyoruz. Böylece her belediye faydalanıyor.",
+    "title": "Öğrendiğini geri vermek.",
+    "text": "Serdar, Hollanda belediyelerinin ortak kullandığı açık kaynak katılım platformu OpenStad Headless'e katkı veriyor. Bunun bir kısmını Nijmegen Belediyesi'ndeki işi kapsamında yapıyor. Böylece her belediye faydalanıyor.",
     "button": "GitHub'da gör",
     "merged": "birleştirildi",
     "open": "incelemede",
@@ -136,32 +140,11 @@
     ],
     "photo_alt": "Serdar Aydemir'in portresi"
   },
-  "pricing": {
-    "eyebrow": "Birlikte çalışmak",
-    "title": "Başlamanın üç yolu.",
-    "models": [
-      {
-        "title": "Saatlik ücret",
-        "value": "talep üzerine",
-        "text": "Danışmanlık, denetim ve küçük işler için."
-      },
-      {
-        "title": "Sabit fiyat",
-        "value": "aşama başına",
-        "text": "Net kapsam, net tutar. Sürpriz yok."
-      },
-      {
-        "title": "Saat paketi",
-        "value": "10 · 20 · 40 saat",
-        "text": "Bakım ve geliştirmeye devam için."
-      }
-    ],
-    "note": "Belediyeler için özel teklif hazırlanır."
-  },
   "contact": {
     "eyebrow": "İletişim",
     "title": "ne geliştirmek istediğini anlat",
     "text": "Sorunuzu ya da fikrinizi e-postayla gönderin. En kısa sürede, genellikle birkaç iş günü içinde yanıt alırsınız.",
+    "text_form": "Sorunuzu ya da fikrinizi formla gönderin. En kısa sürede, genellikle birkaç iş günü içinde yanıt alırsınız.",
     "audiences_intro": "Ya da kim olduğunuzu seçin. E-posta programınız doğru konu satırıyla açılır.",
     "audiences": [
       {
@@ -182,7 +165,35 @@
     "copy_failed": "Kopyalanamadı. Adres:",
     "calendar": "Tanışma görüşmesi planla",
     "whatsapp": "WhatsApp",
-    "no_tracking": "Form yok, bülten yok, takip yok."
+    "no_tracking": "Bülten yok, takip yok.",
+    "form": {
+      "required_note": "* işaretli alanlar zorunludur.",
+      "name": "Ad soyad",
+      "email": "E-posta adresi",
+      "organisation": "Kurum",
+      "optional": "isteğe bağlı",
+      "type": "Kim olarak yazıyorsunuz",
+      "type_placeholder": "Bir seçim yapın",
+      "type_options": [
+        "Belediye ya da kamu kurumu çalışanı",
+        "İşletme sahibi",
+        "Bireysel"
+      ],
+      "message": "Mesaj",
+      "message_hint": "Ne aradığınızı ya da nerede takıldığınızı kısaca anlatın.",
+      "submit": "Mesajı gönder",
+      "sending": "Gönderiliyor…",
+      "privacy": "Bilgilerinizi yalnızca mesajınızı yanıtlamak için kullanırız.",
+      "privacy_link": "Gizlilik bildirimi",
+      "error_name": "Adınızı yazın.",
+      "error_email": "Geçerli bir e-posta adresi yazın, örneğin ad@ornek.nl.",
+      "error_message": "Mesajınızı yazın.",
+      "success_title": "Teşekkürler, mesajınız gönderildi.",
+      "success_text": "En kısa sürede, genellikle birkaç iş günü içinde yanıt alırsınız.",
+      "failed": "Şu anda gönderilemiyor. Daha sonra tekrar deneyin ya da şu adrese e-posta gönderin:",
+      "too_fast": "Az önce bir mesaj gönderdiniz. Birkaç saniye bekleyip tekrar deneyin.",
+      "or_mail": "E-postayı mı tercih edersiniz?"
+    }
   },
   "footer": {
     "kvk": "Ticaret Odası (KvK)",

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Mergen Tech — Software that hits the mark",
-    "description": "Mergen Tech builds accessible civic participation tools for Dutch municipalities and custom software for businesses. Open source where possible, WCAG 2.2 as the standard."
+    "title": "Mergen Tech — Software that works for everyone",
+    "description": "Mergen Tech builds software that solves problems for Dutch municipalities and other public bodies, and custom software for businesses. Open source, WCAG 2.2."
   },
   "nav": {
     "services": "Services",
-    "work": "Work",
+    "work": "Experience",
     "products": "Products",
     "about": "About",
     "opensource": "Open source",
@@ -19,10 +19,13 @@
   },
   "hero": {
     "prompt_command": "what are you building?",
-    "title": "Software that hits the mark",
-    "lead": "Mergen Tech builds accessible civic participation tools for municipalities and custom software for businesses. Open source where possible, WCAG 2.2 as the standard.",
-    "cta_primary": "See our work",
-    "cta_secondary": "Get in touch"
+    "title": "Software that works for everyone",
+    "lead": "Mergen Tech builds software that solves problems for municipalities and other public bodies, and custom software for businesses. Open source where possible, WCAG 2.2 as the standard.",
+    "cta_primary": "See experience",
+    "cta_secondary": "Get in touch",
+    "step_design": "design",
+    "step_build": "build",
+    "step_test": "test"
   },
   "trust": {
     "command": "ls municipalities/",
@@ -34,8 +37,8 @@
     "title": "Two tracks, one standard.",
     "cards": [
       {
-        "title": "For municipalities",
-        "text": "Participation tools every resident can use. Built on OpenStad and tested for accessibility.",
+        "title": "For government",
+        "text": "From citizen participation to accessible documents: software that fits how government works and that every resident can use.",
         "bullets": [
           "Plugins and widgets for OpenStad Headless",
           "Digital accessibility: WCAG 2.2 and EN 301 549",
@@ -64,8 +67,9 @@
     "more_text": "We are working on new products. As soon as something is ready, you will find it here."
   },
   "work": {
-    "eyebrow": "Featured work",
+    "eyebrow": "The founder's experience",
     "title": "Built for real residents.",
+    "intro": "Serdar Aydemir built this work himself, as a developer employed by the municipality of Nijmegen and as an open source contributor. These are not Mergen Tech commissions.",
     "role": "Role",
     "visit": "View live",
     "code": "View the code",
@@ -92,8 +96,8 @@
   },
   "oss": {
     "eyebrow": "Open source",
-    "title": "What we learn, we give back.",
-    "text": "We contribute to OpenStad Headless, the open source participation platform Dutch municipalities share. That way every municipality benefits.",
+    "title": "What you learn, you give back.",
+    "text": "Serdar contributes to OpenStad Headless, the open source participation platform Dutch municipalities share. He does so partly as part of his job at the municipality of Nijmegen. That way every municipality benefits.",
     "button": "View on GitHub",
     "merged": "merged",
     "open": "in review",
@@ -136,32 +140,11 @@
     ],
     "photo_alt": "Portrait of Serdar Aydemir"
   },
-  "pricing": {
-    "eyebrow": "Working together",
-    "title": "Three ways to start.",
-    "models": [
-      {
-        "title": "Hourly rate",
-        "value": "on request",
-        "text": "For advice, audits and small jobs."
-      },
-      {
-        "title": "Fixed price",
-        "value": "per phase",
-        "text": "Clear scope, clear amount. No surprises."
-      },
-      {
-        "title": "Prepaid hours",
-        "value": "10 · 20 · 40 hours",
-        "text": "For maintenance and further development."
-      }
-    ],
-    "note": "Municipalities receive a tailored quote."
-  },
   "contact": {
     "eyebrow": "Contact",
     "title": "tell us what you want to build",
     "text": "Send an email with your question or idea. You will get a reply as soon as possible, usually within a few working days.",
+    "text_form": "Fill in the form with your question or idea. You will get a reply as soon as possible, usually within a few working days.",
     "audiences_intro": "Or choose who you are. Your email program will open with the right subject.",
     "audiences": [
       {
@@ -182,7 +165,35 @@
     "copy_failed": "Copying did not work. The address is:",
     "calendar": "Schedule an intro call",
     "whatsapp": "WhatsApp",
-    "no_tracking": "No form, no newsletter, no tracking."
+    "no_tracking": "No newsletter, no tracking.",
+    "form": {
+      "required_note": "Fields marked with * are required.",
+      "name": "Name",
+      "email": "Email address",
+      "organisation": "Organisation",
+      "optional": "optional",
+      "type": "I am getting in touch as",
+      "type_placeholder": "Choose one",
+      "type_options": [
+        "Someone working for a municipality or government",
+        "A business owner",
+        "A private individual"
+      ],
+      "message": "Message",
+      "message_hint": "Tell us briefly what you are looking for or what you are stuck on.",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "privacy": "We only use your details to reply to your message.",
+      "privacy_link": "Privacy statement",
+      "error_name": "Enter your name.",
+      "error_email": "Enter a valid email address, for example name@example.com.",
+      "error_message": "Write your message.",
+      "success_title": "Thank you, your message has been sent.",
+      "success_text": "You will get a reply as soon as possible, usually within a few working days.",
+      "failed": "Sending is not working right now. Try again later or send an email to",
+      "too_fast": "You have just sent a message. Wait a few seconds and try again.",
+      "or_mail": "Prefer email?"
+    }
   },
   "footer": {
     "kvk": "Chamber of Commerce (KvK)",

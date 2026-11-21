@@ -20,7 +20,6 @@ const SECTION_LABELS = {
   oss: 'Açık kaynak bölümü',
   process: 'Çalışma şekli',
   about: 'Hakkında',
-  pricing: 'Birlikte çalışmak (fiyat modelleri)',
   contact: 'İletişim',
   footer: 'Footer',
   notfound: '404 sayfası',
@@ -225,7 +224,6 @@ const config = {
           file: 'src/content/company.json',
           fields: [
             { label: 'Şirket adı', name: 'name', widget: 'string' },
-            { label: 'Hukuki yapı', name: 'legal_form', widget: 'string' },
             { label: 'Kurucu', name: 'founder', widget: 'string' },
             { label: 'KvK numarası', name: 'kvk', widget: 'string' },
             { label: 'Vestigingsnummer', name: 'vestigingsnummer', widget: 'string', required: false },
@@ -234,6 +232,7 @@ const config = {
             { label: 'Posta kodu', name: 'postal_code', widget: 'string' },
             { label: 'Şehir', name: 'city', widget: 'string' },
             { label: 'E-posta', name: 'email', widget: 'string' },
+            { label: 'İletişim formu: Forminit form kimliği (boşsa form gösterilmez)', name: 'form_id', widget: 'string', required: false },
             { label: 'Takvim linki (Cal.com vb.)', name: 'calendar_url', widget: 'string', required: false },
             { label: 'LinkedIn', name: 'linkedin_url', widget: 'string', required: false },
             { label: 'GitHub (şirket)', name: 'github_url', widget: 'string', required: false },

@@ -16,7 +16,7 @@ export default defineConfig({
         defaultLocale: 'nl',
         locales: { nl: 'nl-NL', en: 'en', tr: 'tr-TR' },
       },
-      filter: (page) => !page.includes('/admin/'),
+      filter: (page) => !page.includes('/admin/') && !page.includes('/bedankt/'),
     }),
   ],
 });

@@ -2,8 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import { LOCALES, type Locale } from '../../lib/i18n';
 
-// Tekstpagina's (privacy, colofon): één Markdown-bestand per taal in src/content/pages/.
-type Doc = { frontmatter: { title: string; updated?: string | Date }; Content: any };
+// Tekstpagina's (privacy, colofon, bedankt): één Markdown-bestand per taal in src/content/pages/.
+type Doc = { frontmatter: { title: string; updated?: string | Date; noindex?: boolean }; Content: any };
 const docs = import.meta.glob<Doc>('../../content/pages/*.md', { eager: true });
 
 export function getStaticPaths() {
@@ -17,12 +17,12 @@ export function getStaticPaths() {
 const locale = Astro.params.lang as Locale;
 const slug = Astro.params.page as string;
 const doc = docs[`../../content/pages/${slug}.${locale}.md`];
-const { title, updated } = doc.frontmatter;
+const { title, updated, noindex } = doc.frontmatter;
 const Content = doc.Content;
 const date = updated ? new Date(updated) : undefined;
 const hasAll = LOCALES.every((l) => `../../content/pages/${slug}.${l}.md` in docs);
 ---
-<Base locale={locale} slug={hasAll ? slug : ''} title={title} noindex={!hasAll}>
+<Base locale={locale} slug={hasAll ? slug : ''} title={title} noindex={!hasAll || noindex === true}>
   <div class="wrap prose-page">
     <article class="prose">
       <h1>{title}</h1>
