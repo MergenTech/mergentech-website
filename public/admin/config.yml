@@ -477,10 +477,6 @@ collections:
                 name: no_cookies
                 widget: string
                 required: false
-              - label: Source
-                name: source
-                widget: string
-                required: false
           - label: 404 sayfası
             name: notfound
             widget: object
@@ -963,10 +959,6 @@ collections:
                 name: no_cookies
                 widget: string
                 required: false
-              - label: Source
-                name: source
-                widget: string
-                required: false
           - label: 404 sayfası
             name: notfound
             widget: object
@@ -1447,10 +1439,6 @@ collections:
                 required: false
               - label: No cookies
                 name: no_cookies
-                widget: string
-                required: false
-              - label: Source
-                name: source
                 widget: string
                 required: false
           - label: 404 sayfası

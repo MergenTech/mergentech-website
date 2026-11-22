@@ -5,7 +5,7 @@ updated: 2026-11-14
 
 ## Techniek
 
-Deze website is gebouwd met [Astro](https://astro.build) en bestaat uit statische pagina's. Er is geen database en er zijn geen cookies. De broncode staat open op [GitHub](https://github.com/MergenTech/mergentech-website).
+Deze website is gebouwd met [Astro](https://astro.build) en bestaat uit statische pagina's. Er is geen database en er zijn geen cookies.
 
 ## Lettertypen
 

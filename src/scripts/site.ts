@@ -68,20 +68,34 @@ if (motionBtn) {
 }
 
 /* ---- onderdelen die starten zodra ze in beeld komen ---- */
+// data-inview: start zodra een stukje in beeld is.
+// data-inview="full": start pas als het hele element zichtbaar is (onder de vaste header).
+// Is het element hoger dan het scherm, dan start het zodra het scherm er zo goed als vol mee staat.
 const inview = document.querySelectorAll<HTMLElement>('[data-inview]');
 if ('IntersectionObserver' in window) {
-  const io = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          io.unobserve(entry.target);
-        }
-      }
-    },
+  const show = (el: Element, io: IntersectionObserver) => {
+    el.classList.add('in-view');
+    io.unobserve(el);
+  };
+  const partial = new IntersectionObserver(
+    (entries) => entries.forEach((e) => e.isIntersecting && show(e.target, partial)),
     { rootMargin: '0px 0px -12% 0px', threshold: 0.15 },
   );
-  inview.forEach((el) => io.observe(el));
+  const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height ?? 0;
+  const full = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting || !e.rootBounds) continue;
+        const fits = Math.min(1, e.rootBounds.height / e.boundingClientRect.height);
+        if (e.intersectionRatio >= fits * 0.97) show(e.target, full);
+      }
+    },
+    {
+      rootMargin: `-${Math.round(headerHeight)}px 0px 0px 0px`,
+      threshold: Array.from({ length: 21 }, (_, i) => i / 20),
+    },
+  );
+  inview.forEach((el) => (el.dataset.inview === 'full' ? full : partial).observe(el));
 } else {
   inview.forEach((el) => el.classList.add('in-view'));
 }

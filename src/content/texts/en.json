@@ -184,8 +184,7 @@
     "privacy": "Privacy statement",
     "colophon": "Colophon",
     "proof_title": "How this site is built",
-    "no_cookies": "No tracking cookies",
-    "source": "Source code on GitHub"
+    "no_cookies": "No tracking cookies"
   },
   "notfound": {
     "title": "404: path not found",

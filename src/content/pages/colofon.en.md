@@ -5,7 +5,7 @@ updated: 2026-11-14
 
 ## Technology
 
-This website is built with [Astro](https://astro.build) and consists of static pages. There is no database and there are no cookies. The source code is public on [GitHub](https://github.com/MergenTech/mergentech-website).
+This website is built with [Astro](https://astro.build) and consists of static pages. There is no database and there are no cookies.
 
 ## Fonts
 

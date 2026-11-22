@@ -5,7 +5,7 @@ updated: 2026-11-14
 
 ## Teknik
 
-Bu web sitesi [Astro](https://astro.build) ile geliştirildi ve statik sayfalardan oluşur. Veritabanı ve çerez yoktur. Kaynak kodu [GitHub](https://github.com/MergenTech/mergentech-website) üzerinde açıktır.
+Bu web sitesi [Astro](https://astro.build) ile geliştirildi ve statik sayfalardan oluşur. Veritabanı ve çerez yoktur.
 
 ## Yazı tipleri
 
