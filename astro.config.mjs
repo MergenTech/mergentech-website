@@ -16,7 +16,18 @@ export default defineConfig({
         defaultLocale: 'nl',
         locales: { nl: 'nl-NL', en: 'en', tr: 'tr-TR' },
       },
-      filter: (page) => !page.includes('/admin/') && !page.includes('/bedankt/'),
+      // De hoofdpagina (/) stuurt alleen door naar /nl/ en staat op noindex: niet in de sitemap.
+      filter: (page) =>
+        new URL(page).pathname !== base && !page.includes('/admin/') && !page.includes('/bedankt/'),
+      // Taalversies gelijk aan de <link rel="alternate"> in de pagina's: zonder /, met x-default (nl).
+      serialize(item) {
+        if (item.links) {
+          item.links = item.links.filter((l) => new URL(l.url).pathname !== base);
+          const nl = item.links.find((l) => l.lang === 'nl-NL');
+          if (nl) item.links.push({ lang: 'x-default', url: nl.url });
+        }
+        return item;
+      },
     }),
   ],
 });
