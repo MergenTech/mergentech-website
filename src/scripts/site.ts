@@ -86,63 +86,6 @@ if ('IntersectionObserver' in window) {
   inview.forEach((el) => el.classList.add('in-view'));
 }
 
-/* ---- werk: tabbladen ---- */
-document.querySelectorAll<HTMLElement>('[data-tabs]').forEach((group) => {
-  const list = group.querySelector<HTMLElement>('[data-tablist]');
-  const tabs = Array.from(group.querySelectorAll<HTMLButtonElement>('[data-tab]'));
-  const panels = Array.from(group.querySelectorAll<HTMLElement>('[data-panel]'));
-  if (!list || tabs.length < 2) return;
-
-  list.hidden = false;
-  list.setAttribute('role', 'tablist');
-  // op brede schermen staan de tabbladen onder elkaar, op smalle naast elkaar
-  const stacked = matchMedia('(min-width: 56.3125em)');
-  const orient = () => list.setAttribute('aria-orientation', stacked.matches ? 'vertical' : 'horizontal');
-  orient();
-  stacked.addEventListener('change', orient);
-  panels.forEach((panel) => {
-    panel.setAttribute('role', 'tabpanel');
-    const tab = tabs.find((t) => t.dataset.tab === panel.id);
-    if (tab) panel.setAttribute('aria-labelledby', tab.id);
-  });
-  tabs.forEach((tab) => {
-    tab.setAttribute('role', 'tab');
-    tab.setAttribute('aria-controls', tab.dataset.tab!);
-  });
-
-  const select = (index: number, focus = false, animate = true) => {
-    tabs.forEach((tab, i) => {
-      const on = i === index;
-      tab.setAttribute('aria-selected', String(on));
-      tab.tabIndex = on ? 0 : -1;
-      const panel = panels.find((p) => p.id === tab.dataset.tab);
-      if (!panel) return;
-      panel.hidden = !on;
-      panel.classList.toggle('is-active', on);
-      panel.classList.toggle('is-entering', on && animate);
-    });
-    if (focus) tabs[index].focus();
-  };
-
-  tabs.forEach((tab, i) => {
-    tab.addEventListener('click', () => select(i));
-    tab.addEventListener('keydown', (e) => {
-      const keys: Record<string, number> = {
-        ArrowDown: i + 1,
-        ArrowRight: i + 1,
-        ArrowUp: i - 1,
-        ArrowLeft: i - 1,
-        Home: 0,
-        End: tabs.length - 1,
-      };
-      if (!(e.key in keys)) return;
-      e.preventDefault();
-      select((keys[e.key] + tabs.length) % tabs.length, true);
-    });
-  });
-  select(0, false, false);
-});
-
 /* ---- e-mailadres kopiëren ---- */
 document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
   const status = btn.closest('div')?.parentElement?.querySelector<HTMLElement>('[data-copy-status]');

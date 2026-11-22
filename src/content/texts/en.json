@@ -5,10 +5,8 @@
   },
   "nav": {
     "services": "Services",
-    "work": "Experience",
     "products": "Products",
     "about": "About",
-    "opensource": "Open source",
     "cta": "Get in touch",
     "menu": "Menu",
     "skip": "Skip to content",
@@ -67,15 +65,6 @@
     "more_title": "More to come",
     "more_text": "We are working on new products. As soon as something is ready, you will find it here."
   },
-  "work": {
-    "eyebrow": "The founder's experience",
-    "title": "Built for real residents.",
-    "intro": "Serdar Aydemir built this work himself, as a developer employed by the municipality of Nijmegen and as an open source contributor. These are not Mergen Tech commissions.",
-    "role": "Role",
-    "visit": "View live",
-    "code": "View the code",
-    "choose": "Choose a project"
-  },
   "a11y": {
     "eyebrow": "Accessible by default",
     "title": "Not fixed afterwards. From the first line.",
@@ -94,16 +83,6 @@
       }
     ],
     "note": "This site uses no tracking cookies and respects your preference for reduced motion. Use the pause button at the top to switch animations off yourself."
-  },
-  "oss": {
-    "eyebrow": "Open source",
-    "title": "What you learn, you give back.",
-    "text": "Serdar contributes to OpenStad Headless, the open source participation platform Dutch municipalities share. He does so partly as part of his job at the municipality of Nijmegen. That way every municipality benefits.",
-    "button": "View on GitHub",
-    "merged": "merged",
-    "open": "in review",
-    "summary": "contributions to openstad-headless",
-    "fallback": "View all contributions on GitHub."
   },
   "process": {
     "eyebrow": "How we work",

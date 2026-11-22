@@ -38,20 +38,12 @@ collections:
                 name: services
                 widget: string
                 required: false
-              - label: Work
-                name: work
-                widget: string
-                required: false
               - label: Products
                 name: products
                 widget: string
                 required: false
               - label: About
                 name: about
-                widget: string
-                required: false
-              - label: Opensource
-                name: opensource
                 widget: string
                 required: false
               - label: Cta
@@ -206,39 +198,6 @@ collections:
                 name: more_text
                 widget: text
                 required: false
-          - label: Projeler bölümü (başlıklar)
-            name: work
-            widget: object
-            collapsed: true
-            fields:
-              - label: Eyebrow
-                name: eyebrow
-                widget: string
-                required: false
-              - label: Title
-                name: title
-                widget: string
-                required: false
-              - label: Intro
-                name: intro
-                widget: text
-                required: false
-              - label: Role
-                name: role
-                widget: string
-                required: false
-              - label: Visit
-                name: visit
-                widget: string
-                required: false
-              - label: Code
-                name: code
-                widget: string
-                required: false
-              - label: Choose
-                name: choose
-                widget: string
-                required: false
           - label: Erişilebilirlik bölümü
             name: a11y
             widget: object
@@ -268,43 +227,6 @@ collections:
               - label: Note
                 name: note
                 widget: text
-                required: false
-          - label: Açık kaynak bölümü
-            name: oss
-            widget: object
-            collapsed: true
-            fields:
-              - label: Eyebrow
-                name: eyebrow
-                widget: string
-                required: false
-              - label: Title
-                name: title
-                widget: string
-                required: false
-              - label: Text
-                name: text
-                widget: text
-                required: false
-              - label: Button
-                name: button
-                widget: string
-                required: false
-              - label: Merged
-                name: merged
-                widget: string
-                required: false
-              - label: Open
-                name: open
-                widget: string
-                required: false
-              - label: Summary
-                name: summary
-                widget: string
-                required: false
-              - label: Fallback
-                name: fallback
-                widget: string
                 required: false
           - label: Çalışma şekli
             name: process
@@ -602,20 +524,12 @@ collections:
                 name: services
                 widget: string
                 required: false
-              - label: Work
-                name: work
-                widget: string
-                required: false
               - label: Products
                 name: products
                 widget: string
                 required: false
               - label: About
                 name: about
-                widget: string
-                required: false
-              - label: Opensource
-                name: opensource
                 widget: string
                 required: false
               - label: Cta
@@ -770,39 +684,6 @@ collections:
                 name: more_text
                 widget: text
                 required: false
-          - label: Projeler bölümü (başlıklar)
-            name: work
-            widget: object
-            collapsed: true
-            fields:
-              - label: Eyebrow
-                name: eyebrow
-                widget: string
-                required: false
-              - label: Title
-                name: title
-                widget: string
-                required: false
-              - label: Intro
-                name: intro
-                widget: text
-                required: false
-              - label: Role
-                name: role
-                widget: string
-                required: false
-              - label: Visit
-                name: visit
-                widget: string
-                required: false
-              - label: Code
-                name: code
-                widget: string
-                required: false
-              - label: Choose
-                name: choose
-                widget: string
-                required: false
           - label: Erişilebilirlik bölümü
             name: a11y
             widget: object
@@ -832,43 +713,6 @@ collections:
               - label: Note
                 name: note
                 widget: text
-                required: false
-          - label: Açık kaynak bölümü
-            name: oss
-            widget: object
-            collapsed: true
-            fields:
-              - label: Eyebrow
-                name: eyebrow
-                widget: string
-                required: false
-              - label: Title
-                name: title
-                widget: string
-                required: false
-              - label: Text
-                name: text
-                widget: text
-                required: false
-              - label: Button
-                name: button
-                widget: string
-                required: false
-              - label: Merged
-                name: merged
-                widget: string
-                required: false
-              - label: Open
-                name: open
-                widget: string
-                required: false
-              - label: Summary
-                name: summary
-                widget: string
-                required: false
-              - label: Fallback
-                name: fallback
-                widget: string
                 required: false
           - label: Çalışma şekli
             name: process
@@ -1166,20 +1010,12 @@ collections:
                 name: services
                 widget: string
                 required: false
-              - label: Work
-                name: work
-                widget: string
-                required: false
               - label: Products
                 name: products
                 widget: string
                 required: false
               - label: About
                 name: about
-                widget: string
-                required: false
-              - label: Opensource
-                name: opensource
                 widget: string
                 required: false
               - label: Cta
@@ -1334,39 +1170,6 @@ collections:
                 name: more_text
                 widget: text
                 required: false
-          - label: Projeler bölümü (başlıklar)
-            name: work
-            widget: object
-            collapsed: true
-            fields:
-              - label: Eyebrow
-                name: eyebrow
-                widget: string
-                required: false
-              - label: Title
-                name: title
-                widget: string
-                required: false
-              - label: Intro
-                name: intro
-                widget: text
-                required: false
-              - label: Role
-                name: role
-                widget: string
-                required: false
-              - label: Visit
-                name: visit
-                widget: string
-                required: false
-              - label: Code
-                name: code
-                widget: string
-                required: false
-              - label: Choose
-                name: choose
-                widget: string
-                required: false
           - label: Erişilebilirlik bölümü
             name: a11y
             widget: object
@@ -1396,43 +1199,6 @@ collections:
               - label: Note
                 name: note
                 widget: text
-                required: false
-          - label: Açık kaynak bölümü
-            name: oss
-            widget: object
-            collapsed: true
-            fields:
-              - label: Eyebrow
-                name: eyebrow
-                widget: string
-                required: false
-              - label: Title
-                name: title
-                widget: string
-                required: false
-              - label: Text
-                name: text
-                widget: text
-                required: false
-              - label: Button
-                name: button
-                widget: string
-                required: false
-              - label: Merged
-                name: merged
-                widget: string
-                required: false
-              - label: Open
-                name: open
-                widget: string
-                required: false
-              - label: Summary
-                name: summary
-                widget: string
-                required: false
-              - label: Fallback
-                name: fallback
-                widget: string
                 required: false
           - label: Çalışma şekli
             name: process
@@ -1729,102 +1495,6 @@ collections:
                     value: client
                   - label: Deneyim / topluluk
                     value: experience
-  - name: projects
-    label: Projeler
-    label_singular: Proje
-    folder: src/content/projects
-    extension: json
-    create: true
-    slug: "{{name}}"
-    summary: "{{order}} · {{name}}"
-    fields:
-      - label: Ad
-        name: name
-        widget: string
-      - label: Yayında (sitede göster)
-        name: published
-        widget: boolean
-        default: true
-      - label: Sıra (küçük sayı önce gelir)
-        name: order
-        widget: number
-        value_type: int
-        default: 10
-      - label: Çizim
-        name: visual
-        widget: select
-        default: swipe
-        options:
-          - label: Telefon + kart (swipe)
-            value: swipe
-          - label: Zaman çizelgesi
-            value: timeline
-          - label: Çubuk grafik
-            value: bars
-      - label: Görsel (boş bırakılırsa çizim gösterilir)
-        name: image
-        widget: image
-        required: false
-      - label: Etiketler
-        name: tags
-        widget: list
-        field:
-          label: Etiket
-          name: tag
-          widget: string
-      - label: Canlı link
-        name: link
-        widget: string
-        required: false
-      - label: Kod linki (repo)
-        name: repo
-        widget: string
-        required: false
-      - label: Nederlands
-        name: nl
-        widget: object
-        collapsed: false
-        fields:
-          - label: Başlık
-            name: title
-            widget: string
-          - label: Özet
-            name: summary
-            widget: text
-          - label: Rol (kim, hangi sıfatla yaptı)
-            name: role
-            widget: text
-            required: false
-      - label: English
-        name: en
-        widget: object
-        collapsed: true
-        fields:
-          - label: Başlık
-            name: title
-            widget: string
-          - label: Özet
-            name: summary
-            widget: text
-          - label: Rol (kim, hangi sıfatla yaptı)
-            name: role
-            widget: text
-            required: false
-      - label: Türkçe
-        name: tr
-        widget: object
-        collapsed: true
-        fields:
-          - label: Başlık
-            name: title
-            widget: string
-          - label: Özet
-            name: summary
-            widget: text
-          - label: Rol (kim, hangi sıfatla yaptı)
-            name: role
-            widget: text
-            required: false
   - name: products
     label: Ürünler
     label_singular: Ürün
@@ -1989,28 +1659,6 @@ collections:
             name: portrait
             widget: image
             required: false
-      - label: Açık kaynak listesi (GitHub)
-        name: oss
-        file: src/content/oss.json
-        fields:
-          - label: Repo (owner/name)
-            name: repo
-            widget: string
-          - label: GitHub kullanıcı adı
-            name: author
-            widget: string
-          - label: En fazla kaç PR gösterilsin
-            name: max_items
-            widget: number
-            value_type: int
-          - label: Gösterilmeyecek PR numaraları
-            name: exclude
-            widget: list
-            field:
-              label: PR numarası
-              name: number
-              widget: number
-              value_type: int
   - name: pages
     label: Yasal sayfalar
     files:

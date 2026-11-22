@@ -20,15 +20,13 @@ Token aanmaken: GitHub → Settings → Developer settings → Personal access t
 |---|---|
 | Alle teksten per taal | `src/content/texts/nl.json`, `en.json`, `tr.json` |
 | Gemeenten en organisaties | `src/content/gemeenten.json` (`relation`: `client` of `experience`) |
-| Projecten | `src/content/projects/*.json` (één bestand per project) |
 | Producten | `src/content/products/*.json` |
 | Bedrijfsgegevens, e-mail, links, contactformulier (`form_id` van Forminit; leeg = geen formulier) | `src/content/company.json` |
-| Open-source-lijst (GitHub) | `src/content/oss.json` |
 | Privacy en colofon | `src/content/pages/*.md` |
 | Kelime Zirvesi: privacy en voorwaarden (Turks, `/kelime-zirvesi/gizlilik/` en `/kosullar/`) | `src/content/kelime-zirvesi/*.md` — kopie van `assets/legal/*_tr.md` uit de app-repo; daar eerst wijzigen |
 | AdMob `app-ads.txt` | `public/app-ads.txt` |
 
-- Een project of product verbergen: zet `"published": false`.
+- Een product verbergen: zet `"published": false`.
 - Een veld in `company.json` leeg laten (bijvoorbeeld `calendar_url` of `vat_id`) betekent: niet tonen.
 - Afbeeldingen komen in `public/uploads/`. Zonder afbeelding toont de site een tekening.
 - Een nieuwe tekstsleutel toegevoegd aan de drie taalbestanden? Draai `npm run cms:config`, zodat het beheerpaneel het veld ook kent.
@@ -58,7 +56,7 @@ Zolang het domein nog niet gekoppeld is, staat de site op `https://mergentech.gi
 ## Opbouw
 
 ```
-src/content/      inhoud (teksten, projecten, producten, bedrijfsgegevens)
+src/content/      inhoud (teksten, producten, bedrijfsgegevens)
 src/components/   de secties van de homepage
 src/layouts/      basislayout (head, header, footer)
 src/styles/       global.css met de huisstijl

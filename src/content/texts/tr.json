@@ -5,10 +5,8 @@
   },
   "nav": {
     "services": "Hizmetler",
-    "work": "Deneyim",
     "products": "Ürünler",
     "about": "Hakkında",
-    "opensource": "Açık kaynak",
     "cta": "İletişime geç",
     "menu": "Menü",
     "skip": "İçeriğe geç",
@@ -67,15 +65,6 @@
     "more_title": "Devamı gelecek",
     "more_text": "Yeni ürünler üzerinde çalışıyoruz. Hazır olan burada yerini alacak."
   },
-  "work": {
-    "eyebrow": "Kurucunun deneyimi",
-    "title": "Gerçek vatandaşlar için geliştirildi.",
-    "intro": "Bu işleri Serdar Aydemir kendisi yaptı: Nijmegen Belediyesi'nde çalışan bir geliştirici ve açık kaynak katkıcısı olarak. Mergen Tech'e verilmiş işler değildir.",
-    "role": "Rol",
-    "visit": "Canlı gör",
-    "code": "Koda bak",
-    "choose": "Bir proje seç"
-  },
   "a11y": {
     "eyebrow": "Standart olarak erişilebilir",
     "title": "Sonradan düzeltilmez. İlk satırdan itibaren.",
@@ -94,16 +83,6 @@
       }
     ],
     "note": "Bu sitede takip çerezi yok ve daha az hareket tercihinize uyulur. Üstteki duraklatma düğmesiyle animasyonları kendiniz de kapatabilirsiniz."
-  },
-  "oss": {
-    "eyebrow": "Açık kaynak",
-    "title": "Öğrendiğini geri vermek.",
-    "text": "Serdar, Hollanda belediyelerinin ortak kullandığı açık kaynak katılım platformu OpenStad Headless'e katkı veriyor. Bunun bir kısmını Nijmegen Belediyesi'ndeki işi kapsamında yapıyor. Böylece her belediye faydalanıyor.",
-    "button": "GitHub'da gör",
-    "merged": "birleştirildi",
-    "open": "incelemede",
-    "summary": "openstad-headless katkısı",
-    "fallback": "Tüm katkıları GitHub'da gör."
   },
   "process": {
     "eyebrow": "Çalışma şeklimiz",

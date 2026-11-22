@@ -16,17 +16,6 @@ export { company, gemeenten };
 
 type Localized<T> = Record<Locale, T>;
 
-export type Project = {
-  order: number;
-  published: boolean;
-  name: string;
-  visual: 'swipe' | 'timeline' | 'bars';
-  image: string;
-  tags: string[];
-  link: string;
-  repo: string;
-} & Localized<{ title: string; summary: string; role: string }>;
-
 export type Product = {
   order: number;
   published: boolean;
@@ -49,10 +38,6 @@ function collect<T extends { order: number; published: boolean }>(
     .filter((item) => item.published !== false)
     .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
 }
-
-export const projects = collect<Project>(
-  import.meta.glob('../content/projects/*.json', { eager: true }),
-);
 
 export const products = collect<Product>(
   import.meta.glob('../content/products/*.json', { eager: true }),
