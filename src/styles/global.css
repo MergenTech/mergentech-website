@@ -29,7 +29,7 @@
   --text-soft: #3b3a37;
   --muted: #595550;
   --border: #d5cebd;
-  --border-strong: #8c8679;
+  --border-strong: #7a7468;
   --accent-text: #9c4210;
   --btn: #a9480f;
   --btn-hover: #8f3c0b;
@@ -307,6 +307,18 @@ main:focus {
   background: var(--btn-hover);
 }
 
+/* op een donkere achtergrond haalt de vulling alleen geen 3:1; een lichtere rand wel */
+.band .btn-primary,
+:root[data-theme='dark'] .btn-primary {
+  border-color: var(--band-accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .btn-primary {
+    border-color: var(--band-accent);
+  }
+}
+
 .btn-ghost {
   border-color: var(--border-strong);
   color: var(--text);
@@ -523,6 +535,15 @@ main:focus {
 
 .lang a:not([aria-current='true']):hover {
   background: var(--bg-alt);
+}
+
+.lang a:focus-visible {
+  outline-offset: -3px;
+  border-radius: 7px;
+}
+
+.lang a[aria-current='true']:focus-visible {
+  outline-color: var(--bg);
 }
 
 .tool {
@@ -744,8 +765,8 @@ main:focus {
 }
 
 .typed .word {
-  white-space: nowrap;
   display: inline-block;
+  max-width: 100%;
 }
 
 .typed .ch {
@@ -1478,6 +1499,10 @@ main:focus {
   border-left-color: var(--orange);
   color: var(--text);
   font-weight: 600;
+}
+
+.work-tab:focus-visible {
+  outline-offset: -3px;
 }
 
 .work-tab .num {
@@ -2458,15 +2483,17 @@ main:focus {
 
 .prose {
   max-width: 44rem;
+  overflow-wrap: anywhere;
 }
 
 .prose h1 {
   font-family: var(--font-mono);
   font-weight: 600;
-  font-size: clamp(2rem, 1.4rem + 2.6vw, 3rem);
+  font-size: clamp(1.625rem, 1.1rem + 2.6vw, 3rem);
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 8px;
+  hyphens: auto;
 }
 
 .prose .updated {

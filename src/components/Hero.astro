@@ -15,12 +15,11 @@ const typed = words
   .map((word, w) => {
     const last = w === words.length - 1;
     const chars = [...word].map((c) => `<span class="ch" style="--i:${i++}">${esc(c)}</span>`).join('');
-    const tail = last
-      ? `<span class="ch dot" style="--i:${i++}">.</span>`
-      : `<span class="ch" style="--i:${i++}"> </span>`;
+    const tail = last ? `<span class="ch dot" style="--i:${i++}">.</span>` : '';
+    if (!last) i++; // de spatie tussen twee woorden telt mee als één tik
     return `<span class="word">${chars}${tail}</span>`;
   })
-  .join('');
+  .join(' ');
 
 // Het beeld rechts: een pagina die zichzelf opbouwt (schets → interface → toegankelijkheidscheck).
 const cards = [
