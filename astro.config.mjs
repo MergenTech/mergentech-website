@@ -3,7 +3,9 @@ import sitemap from '@astrojs/sitemap';
 
 // SITE en BASE komen uit de deploy-workflow (GitHub Pages).
 // Lokaal: http://localhost:4321/
-const site = process.env.SITE || 'https://mergentech.nl';
+// configure-pages geeft het eigen domein door als http://; de site draait op https,
+// dus canonical, hreflang, og:url en sitemap moeten https gebruiken.
+const site = (process.env.SITE || 'https://mergentech.nl').replace(/^http:\/\//, 'https://');
 const base = process.env.BASE || '/';
 
 export default defineConfig({
