@@ -38,12 +38,12 @@
     "cards": [
       {
         "title": "Kamu kurumları için",
-        "text": "Vatandaş katılımından erişilebilir belgelere: kamunun işleyişine uyan ve her vatandaşın kullanabildiği yazılımlar.",
+        "text": "Kamunun işleyişine uyan ve her vatandaşın kullanabildiği yazılımlar.",
         "bullets": [
-          "OpenStad Headless için eklenti ve widget'lar",
-          "Dijital erişilebilirlik: WCAG 2.2 ve EN 301 549",
-          "Erişilebilir belgeler ve PDF'ler",
-          "TYPO3 web siteleri için yönetim ve danışmanlık"
+          "Katılım platformları için özel geliştirme (OpenStad gibi)",
+          "WCAG 2.2'ye uygun dijital erişilebilirlik",
+          "Kamu hizmetleri için web siteleri ve web uygulamaları",
+          "Danışmanlık, bakım ve geliştirme"
         ]
       },
       {
@@ -52,7 +52,7 @@
         "bullets": [
           "Web ve mobil uygulamalar",
           "Web siteleri ve kurum içi araçlar",
-          "Mümkün olduğunda aşama başına sabit fiyat"
+          "İlk fikirden teslimata ve bakıma"
         ]
       }
     ]

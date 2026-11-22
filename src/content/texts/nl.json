@@ -38,12 +38,12 @@
     "cards": [
       {
         "title": "Voor de overheid",
-        "text": "Van inwonersparticipatie tot toegankelijke documenten: software die aansluit op de praktijk van de overheid en die elke inwoner kan gebruiken.",
+        "text": "Software die aansluit op de praktijk van de overheid en die elke inwoner kan gebruiken.",
         "bullets": [
-          "Plugins en widgets voor OpenStad Headless",
-          "Digitoegankelijkheid: WCAG 2.2 en EN 301 549",
-          "Toegankelijke documenten en pdf's",
-          "Beheer en advies voor TYPO3-websites"
+          "Maatwerk voor participatieplatformen (zoals OpenStad)",
+          "Digitale toegankelijkheid volgens WCAG 2.2",
+          "Websites en webapplicaties voor publieke diensten",
+          "Advies, beheer en doorontwikkeling"
         ]
       },
       {
@@ -52,7 +52,7 @@
         "bullets": [
           "Web- en mobiele apps",
           "Websites en interne tools",
-          "Vaste prijs per fase waar het kan"
+          "Van eerste idee tot oplevering en onderhoud"
         ]
       }
     ]

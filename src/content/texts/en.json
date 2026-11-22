@@ -38,12 +38,12 @@
     "cards": [
       {
         "title": "For government",
-        "text": "From citizen participation to accessible documents: software that fits how government works and that every resident can use.",
+        "text": "Software that fits how government works and that every resident can use.",
         "bullets": [
-          "Plugins and widgets for OpenStad Headless",
-          "Digital accessibility: WCAG 2.2 and EN 301 549",
-          "Accessible documents and PDFs",
-          "Management and advice for TYPO3 websites"
+          "Custom work for participation platforms (such as OpenStad)",
+          "Digital accessibility to WCAG 2.2",
+          "Websites and web applications for public services",
+          "Advice, maintenance and further development"
         ]
       },
       {
@@ -52,7 +52,7 @@
         "bullets": [
           "Web and mobile apps",
           "Websites and internal tools",
-          "Fixed price per phase where possible"
+          "From first idea to delivery and maintenance"
         ]
       }
     ]
