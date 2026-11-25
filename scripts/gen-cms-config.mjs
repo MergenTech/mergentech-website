@@ -174,6 +174,8 @@ const config = {
         image,
         { label: 'Uygulama simgesi (kare; çizimin yerine gösterilir)', name: 'icon', widget: 'image', required: false },
         { label: 'Ürün linki (boşsa iletişim bölümüne gider)', name: 'url', widget: 'string', required: false },
+        { label: 'App Store linki (boşsa düğme gösterilmez)', name: 'app_store_url', widget: 'string', required: false },
+        { label: 'Google Play linki (boşsa düğme gösterilmez)', name: 'play_url', widget: 'string', required: false },
         ...perLocale([
           { label: 'Kısa slogan', name: 'tagline', widget: 'string' },
           { label: 'Açıklama', name: 'text', widget: 'text' },

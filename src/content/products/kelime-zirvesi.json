@@ -2,24 +2,26 @@
   "order": 1,
   "published": true,
   "name": "Kelime Zirvesi",
-  "status": "soon",
+  "status": "live",
   "visual": "letters",
   "image": "",
   "icon": "/uploads/kelime-zirvesi-icon.png",
   "url": "",
+  "app_store_url": "https://apps.apple.com/app/id6835529792",
+  "play_url": "https://play.google.com/store/apps/details?id=tech.mergen.kelimezirvesi",
   "nl": {
     "tagline": "Turks kruiswoordduel voor je telefoon",
-    "text": "Een kruiswoordspel in het Turks waarin je om de beurt letters legt tegen een tegenstander. Wie het woord afmaakt, pakt de bonus. Elke winst brengt je 40 meter hoger de berg op. Binnenkort in de App Store en op Google Play.",
+    "text": "Een kruiswoordspel in het Turks waarin je om de beurt letters legt tegen een tegenstander. Wie het woord afmaakt, pakt de bonus. Elke winst brengt je 40 meter hoger de berg op. Gratis voor iPhone, iPad en Android.",
     "cta": ""
   },
   "en": {
     "tagline": "Turkish crossword duel for your phone",
-    "text": "A crossword game in Turkish where you and an opponent take turns placing letters. Whoever completes the word takes the bonus. Every win takes you 40 metres higher up the mountain. Coming soon to the App Store and Google Play.",
+    "text": "A crossword game in Turkish where you and an opponent take turns placing letters. Whoever completes the word takes the bonus. Every win takes you 40 metres higher up the mountain. Free for iPhone, iPad and Android.",
     "cta": ""
   },
   "tr": {
     "tagline": "Telefonunuz için Türkçe bulmaca düellosu",
-    "text": "Rakibinizle sırayla harf koyduğunuz Türkçe bir bulmaca oyunu. Kelimeyi bitiren bonusu kapar. Her galibiyet sizi dağda 40 metre yukarı taşır. Yakında App Store ve Google Play'de.",
+    "text": "Rakibinizle sırayla harf koyduğunuz Türkçe bir bulmaca oyunu. Kelimeyi bitiren bonusu kapar. Her galibiyet sizi dağda 40 metre yukarı taşır. iPhone, iPad ve Android için ücretsiz.",
     "cta": ""
   }
 }

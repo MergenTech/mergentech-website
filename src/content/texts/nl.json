@@ -62,6 +62,8 @@
     "status_pilot": "pilot",
     "status_live": "live",
     "status_soon": "binnenkort",
+    "store_app_store": "{name} in de App Store",
+    "store_google_play": "{name} op Google Play",
     "more_title": "Meer volgt",
     "more_text": "We werken aan nieuwe producten. Zodra er iets klaar is, staat het hier."
   },

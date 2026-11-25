@@ -62,6 +62,8 @@
     "status_pilot": "pilot",
     "status_live": "live",
     "status_soon": "coming soon",
+    "store_app_store": "{name} on the App Store",
+    "store_google_play": "{name} on Google Play",
     "more_title": "More to come",
     "more_text": "We are working on new products. As soon as something is ready, you will find it here."
   },

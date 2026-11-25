@@ -1352,6 +1352,22 @@ main:focus {
   margin-top: auto;
 }
 
+.store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-store {
+  min-height: 44px;
+  padding: 8px 12px;
+  gap: 6px;
+  font-size: 0.9375rem;
+}
+
 .product-more {
   border-style: dashed;
   background: transparent;

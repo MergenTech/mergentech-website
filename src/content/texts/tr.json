@@ -62,6 +62,8 @@
     "status_pilot": "pilot",
     "status_live": "yayında",
     "status_soon": "yakında",
+    "store_app_store": "{name} App Store'da",
+    "store_google_play": "{name} Google Play'de",
     "more_title": "Devamı gelecek",
     "more_text": "Yeni ürünler üzerinde çalışıyoruz. Hazır olan burada yerini alacak."
   },

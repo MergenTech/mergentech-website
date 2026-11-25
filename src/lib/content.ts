@@ -25,6 +25,8 @@ export type Product = {
   image: string;
   icon?: string;
   url: string;
+  app_store_url?: string;
+  play_url?: string;
 } & Localized<{ tagline: string; text: string; cta: string }>;
 
 function collect<T extends { order: number; published: boolean }>(

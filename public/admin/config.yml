@@ -190,6 +190,14 @@ collections:
                 name: status_soon
                 widget: string
                 required: false
+              - label: Store app store
+                name: store_app_store
+                widget: string
+                required: false
+              - label: Store google play
+                name: store_google_play
+                widget: string
+                required: false
               - label: More title
                 name: more_title
                 widget: string
@@ -670,6 +678,14 @@ collections:
                 required: false
               - label: Status soon
                 name: status_soon
+                widget: string
+                required: false
+              - label: Store app store
+                name: store_app_store
+                widget: string
+                required: false
+              - label: Store google play
+                name: store_google_play
                 widget: string
                 required: false
               - label: More title
@@ -1154,6 +1170,14 @@ collections:
                 name: status_soon
                 widget: string
                 required: false
+              - label: Store app store
+                name: store_app_store
+                widget: string
+                required: false
+              - label: Store google play
+                name: store_google_play
+                widget: string
+                required: false
               - label: More title
                 name: more_title
                 widget: string
@@ -1536,6 +1560,14 @@ collections:
         required: false
       - label: Ürün linki (boşsa iletişim bölümüne gider)
         name: url
+        widget: string
+        required: false
+      - label: App Store linki (boşsa düğme gösterilmez)
+        name: app_store_url
+        widget: string
+        required: false
+      - label: Google Play linki (boşsa düğme gösterilmez)
+        name: play_url
         widget: string
         required: false
       - label: Nederlands

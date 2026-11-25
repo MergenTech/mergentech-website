@@ -66,6 +66,24 @@ const tiles = [
             {c.cta && (
               <a class="link-arrow" href={href}>{c.cta} <span class="arrow" aria-hidden="true">→</span></a>
             )}
+            {(p.app_store_url || p.play_url) && (
+              <ul class="store-links" role="list">
+                {p.app_store_url && (
+                  <li>
+                    <a class="btn btn-ghost btn-store" href={p.app_store_url} aria-label={t.products.store_app_store.replace('{name}', p.name)}>
+                      App Store <span aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                )}
+                {p.play_url && (
+                  <li>
+                    <a class="btn btn-ghost btn-store" href={p.play_url} aria-label={t.products.store_google_play.replace('{name}', p.name)}>
+                      Google Play <span aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                )}
+              </ul>
+            )}
           </article>
         );
       })}
